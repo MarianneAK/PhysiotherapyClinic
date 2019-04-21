@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css?family=Hind:400,700");
+
+input{
+  margin-bottom: 10% !important;
+}
+#carouselContainer{
+    height: 500px;
+}
+
+#formContainer{
+  background-color: white;
+  padding: 4%;
+}
+
+.carousel-thumbnail{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.carousel-like{
+    width: 16%;
+    height: 15%;
+    padding: 2% 0%;
+    float: right;
+    cursor: pointer;
+}
+
+#appointmentBtn{
+    margin: auto;
+    background-color: #21d192;
+    color: white;
+}
+
+#rightSection{
+  box-shadow: 0px 12px 39px -19px rgba(0, 0, 0, 0.75);
+  height: 100%;
+  background-color: white;
+  color: black;
+}
+
+#rightSection header{
+  color: white;
+  text-align: center;
+  padding: 5%;
+  background-color: #21d192;
+  margin-bottom: 4%;
+}
+
+.hourText{
+    padding: 2% 7%;
+    color: #b4aeae;
+    font-size: 1.1em;
+    margin: 0;
+}
+
+#error{
+  display: none;
+  color: red;
+  margin: 0;
+}
+
+.gj-icon, .inputIcons{
+    color: #009688;
+}
+
+.gj-picker-md [role=header], .gj-picker-md [role=body] [role=arrow], .gj-picker .arrow-begin {
+  background: #009688 !important;
+}
+
+.gj-picker-md [role=footer] button.gj-button-md{
+  color: #009688 !important;
+}
+.gj-picker-md .arrow-end{
+  border-color: #009688 !important;
+}
+
+.bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+  width: 100% !important;
+}
+
+.bootstrap-select .dropdown-toggle .filter-option-inner-inner, .dropdown-toggle:after {
+  color: black;
+}
+
+.bootstrap-select .dropdown-menu {
+  min-width: 100% !important;
+}
+
+h3 {
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.carousel-wrapper {
+  position: relative;
+  width: 80%;
+  height: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FFFFFF;
+  background-image: linear-gradient(#FAFAFA 50%, #FFFFFF 50%, rgba(38, 110, 147, 0.65) 50%);
+  box-shadow: 0px 12px 39px -19px rgba(0, 0, 0, 0.75);
+  overflow: hidden;
+}
+.carousel-wrapper .carousel {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: auto;
+}
+.carousel-wrapper .carousel .carousel-cell {
+  padding: 10px;
+  background-color: #FFFFFF;
+  width: 35%;
+  height: auto;
+  min-width: 120px;
+  margin: 0 20px;
+  transition: transform 500ms ease;
+}
+.carousel-wrapper .carousel .carousel-cell .name {
+    display: block;
+    opacity: 0.7;
+    text-align: center;
+    color: rgb(170, 163, 163);
+    text-decoration: none;
+    font-size: 73%;
+    margin: 2%;
+}
+
+.carousel-wrapper .carousel .carousel-cell .line {
+  position: absolute;
+  width: 2px;
+  height: 0;
+  background-color: black;
+  left: 50%;
+  margin: 5px 0 0 -1px;
+  transition: height 300ms ease;
+  display: block;
+}
+.carousel-wrapper .carousel .carousel-cell .price {
+  position: absolute;
+  font-weight: 700;
+  margin: 45px auto 0 auto;
+  left: 50%;
+  transform: translate(-50%);
+  opacity: 0;
+  transition: opacity 300ms ease 300ms;
+}
+.carousel-wrapper .carousel .carousel-cell .price sup {
+  top: 2px;
+  position: absolute;
+}
+.carousel-wrapper .carousel .carousel-cell.is-selected {
+  transform: scale(1.2);
+}
+.carousel-wrapper .carousel .carousel-cell.is-selected .line {
+  height: 35px;
+}
+.carousel-wrapper .carousel .carousel-cell.is-selected .price, .carousel-wrapper .carousel .carousel-cell.is-selected .more {
+  opacity: 1;
+}
+.carousel-wrapper .flickity-page-dots {
+  display: none;
+}
+.carousel-wrapper .flickity-viewport, .carousel-wrapper .flickity-slider {
+  overflow: visible;
+}
+
+

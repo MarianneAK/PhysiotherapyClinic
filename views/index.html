@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Index</title>
+  <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="../styles/index.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <link rel="stylesheet"
+    href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+    integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+
+<body class="container-fluid" style="padding: 0; overflow-x: hidden;">
+
+
+
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark primary-color" style="background: 0 0; width: 100%; position: fixed; height: 70px;">
+
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="#">Navbar</a>
+
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+      aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+
+      <!-- Links -->
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">About</a>
+              <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">About Us</a>
+                <a class="dropdown-item" href="#">Reviews</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">Treatments</a>
+                <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">Conditions</a>
+                  <a class="dropdown-item" href="#">Techniques</a>
+                </div>
+              </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Contact Us
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Appointment</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Log In</a>
+        </li>
+
+      </ul>
+      <!-- Links -->
+
+      <!-- <form class="form-inline">
+        <div class="md-form my-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        </div>
+      </form> -->
+    </div>
+    <!-- Collapsible content -->
+
+  </nav>
+  <!--/.Navbar-->
+
+
+
+  <!-- Video -->
+
+  <div id="videoContainer" class="container-fluid" style="padding: 0;">
+
+    <div class="row" style="padding: 0; margin: 0;">
+      <div class="col-lg-12" style="padding: 0;">
+        <video autoplay="true" loop="true" id="video" muted="muted" width="100%">
+          <source src="../assets/landing-page-video.mp4" type="video/mp4">
+        </video>
+
+        <!-- <div class="content">
+                    <h1>Heading</h1>
+                    <p>Lorem ipsum...</p>
+                    
+                    <button id="videoBtn" onclick="controlVideo()">Pause</button>
+           </div>    -->
+      </div>
+
+    </div>
+  </div>
+
+    <!--video-->
+
+
+    <!--Sign Up-->
+    <div id="signUpContainer" class="container-fluid" style="padding: 5%; background-color: #fafafa;">
+
+      <div class="row">
+
+        <div class="col-md-6 col-sm-12" style="padding: 5% 3%;">
+          <h1>ARE YOU IN PAIN?</h1>
+          <h3>Sign Up now and get your free consultation !</h3>
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+          <!-- Material form register -->
+          <div class="card">
+
+            <h5 class="card-header info-color white-text text-center py-4">
+              <strong>Sign up</strong>
+            </h5>
+
+            <!--Card content-->
+            <div class="card-body px-lg-5 pt-0">
+
+              <!-- Form -->
+              <form class="text-center" style="color: #757575;">
+
+                <div class="form-row">
+                  <div class="col">
+                    <!-- First name -->
+                    <div class="md-form">
+                      <input type="text" id="materialRegisterFormFirstName" class="form-control"
+                        placeholder="First Name">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <!-- Last name -->
+                    <div class="md-form">
+                      <input type="text" id="materialRegisterFormLastName" class="form-control" placeholder="Last Name">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="col">
+                    <!-- First name -->
+                    <div class="md-form">
+                      <input type="email" id="materialRegisterFormFirstName" class="form-control" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <!-- Last name -->
+                    <div class="md-form">
+                      <input type="text" id="materialRegisterFormLastName" class="form-control" placeholder="Phone">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="col">
+                    <!-- First name -->
+                    <div class="md-form">
+                      <textarea id="materialRegisterFormFirstName" class="form-control"
+                        placeholder="Additionnal Comments"></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="col">
+                    <!-- Sign up button -->
+                    <button id="signUpBtn"
+                      class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0 col-md-4 col-sm-12"
+                      type="submit">Sign in</button>
+                  </div>
+                </div>
+
+              </form>
+              <!-- Form -->
+
+            </div>
+            <!-- Material form register -->
+          </div>
+        </div>
+
+      </div>
+</div>
+
+      <!--Sign Up-->
+
+
+
+
+      <!-- Conditions-->
+      <div id="conditionsContainer" class="container-fluid" style="padding: 0; padding-top: 3%;">
+
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-4 col-sm-12" id="humanBody">
+            <!-- <img src="../assets/human-body.png" alt="human-body" width="100%"> -->
+          
+                <a id="bodyPart1" title="Head and Neck" href="https://rehabdynamicsllc.com/body_parts/head-and-neck/"></a>
+                <a id="bodyPart2" title="Back" href="https://rehabdynamicsllc.com/body_parts/back/"></a>
+                <a id="bodyPart3" title="Foot and Ankle" href="https://rehabdynamicsllc.com/body_parts/foot-and-ankle/"></a>
+                <a id="bodyPart4" title="Shoulder" href="https://rehabdynamicsllc.com/body_parts/foot-and-ankle/"></a>
+                <a id="bodyPart5" title="Elbow, Wrist and Hand" href="https://rehabdynamicsllc.com/body_parts/foot-and-ankle/"></a>
+                <a id="bodyPart6" title="Hip" href="https://rehabdynamicsllc.com/body_parts/foot-and-ankle/"></a>
+                <a id="bodyPart7" title="Knee, Balance and Walking" href="https://rehabdynamicsllc.com/body_parts/foot-and-ankle/"></a>
+
+          </div>
+          <div class="col-md-3 col-sm-12">
+            <h4>We treat and help patients with many different conditions.\n
+              Click on the areas highlighted on the body diagram for information on common conditions we treat and how physical therapy can help..</h4>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+      </div>
+
+      <!-- Conditions-->
+
+
+      <!-- Treatments -->
+      <div id="treatmentsContainer" class="container-fluid">
+
+          <div class="row">
+              <div class="col-md-4">
+                  <div class="flip-card">
+                      <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                          <img src="../assets/icons/massage.svg" alt="Avatar" class="cardIcon">
+                          <p class="cardTitle">MANIPULATIVE THERAPY</p>
+                        </div>
+                        <div class="flip-card-back">
+                          <p>Manipulative therapy, is a physical treatment to treat musculoskeletal pain and disability; it most includes kneading and manipulation of muscles, joint mobilization and joint manipulation.</p> 
+                        </div>
+                      </div>
+                    </div>
+              </div>
+
+              <div class="col-md-4">
+                  <div class="flip-card">
+                      <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                          <img src="../assets/icons/cupping.svg" alt="Avatar" class="cardIcon">
+                          <p class="cardTitle">CUPPING</p>
+                        </div>
+                        <div class="flip-card-back">
+                          <p>Cupping therapy is an ancient form of alternative medicine in which a therapist puts special cups on your skin for a few minutes to create suction, which helps with pain, inflammation, blood flow, relaxation and well-being.</p> 
+                        </div>
+                      </div>
+                    </div>
+              </div>
+
+              <div class="col-md-4">
+                  <div class="flip-card">
+                      <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                          <img src="../assets/icons/swimming-pool.svg" alt="Avatar" class="cardIcon">
+                          <p class="cardTitle">HYDROTHERAPY</p>
+                        </div>
+                        <div class="flip-card-back">
+                          <p>Hydrotherapy is the use of water in the treatment of different conditions, including arthritis and related rheumatic complaints. It involves special exercises that you do in a warm-water pool.</p> 
+                        </div>
+                      </div>
+                    </div>
+              </div>
+
+          </div>
+
+
+          <div class="row" style="margin-top: 2%;">
+              <div class="col-md-4">
+                  <div class="flip-card">
+                      <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                          <img src="../assets/icons/cold.svg" alt="Avatar" class="cardIcon">
+                          <p class="cardTitle">CRYOTHERAPY</p>
+                        </div>
+                        <div class="flip-card-back">
+                          <p>Cryotherapy is the local or general use of low temperatures in medical therapy. Cryotherapy may be used to treat a variety of tissue lesions.</p> 
+                        </div>
+                      </div>
+                    </div>
+              </div>
+
+              <div class="col-md-4">
+                      <div class="flip-card">
+                          <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                              <img src="../assets/icons/muscle.svg" alt="Avatar" class="cardIcon">
+                              <p class="cardTitle">STRENGHENING EXERCICES</p>
+                            </div>
+                            <div class="flip-card-back">
+                              <p>Muscle and bone strenghening exercices such as stretching, chin tuck and many more.</p> 
+                            </div>
+                          </div>
+                        </div>
+                </div>
+
+              <div class="col-md-4">
+                  <div class="flip-card">
+                      <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                          <img src="../assets/icons/infrared.svg" alt="Avatar" class="cardIcon">
+                          <p class="cardTitle">INFRARED</p>
+                        </div>
+                        <div class="flip-card-back">
+                          <p>Infrared therapy is a  simple and painless therapy that uses light to treat acute or chronic pain.</p> 
+                        </div>
+                      </div>
+                    </div>
+              </div>
+              
+          </div>
+
+
+        </div>
+
+      <!-- Treatments -->
+
+
+      <!-- Meet the team -->
+
+      <div class="container" id="teamContainer">
+          <div class="row">
+              <div class="col-md-4 col-sm-12">
+                  <div class="our-team">
+                      <div class="pic">
+                          <img src="../assets/images/therapist3.jpg" alt="">
+                      </div>
+                      <div class="team-content">
+                          <h3 class="post-title">Christy Abi Kanaan<small>Osteopathic Director</small></h3>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-md-4 col-sm-12">
+                  <div class="our-team">
+                      <div class="pic">
+                          <img src="../assets/images/therapist2.jpg" alt="">
+                      </div>
+                      <div class="team-content">
+                          <h3 class="post-title">Anastasia Khoury<small>Chiropractic Director</small></h3>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-md-4 col-sm-12">
+                  <div class="our-team">
+                      <div class="pic">
+                          <img src="../assets/images/therapist1.jpg" alt="">
+                      </div>
+                      <div class="team-content">
+                          <h3 class="post-title">Alexandre Hajj<small>Massage Therapy Director</small></h3>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Meet the team -->
+
+<!-- Footer -->
+<!-- Footer -->
+<footer class="page-footer font-small blue-grey lighten-5">
+
+    <div style="background-color: #21d192;">
+      <div class="container">
+
+        <!-- Grid row-->
+        <div class="row py-4 d-flex align-items-center">
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+            <h6 class="mb-0">Get connected with us on social networks!</h6>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+            <!-- Facebook -->
+            <a class="fb-ic">
+              <i class="fab fa-facebook-f white-text mr-4"> </i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic">
+              <i class="fab fa-twitter white-text mr-4"> </i>
+            </a>
+            <!-- Google +-->
+            <a class="gplus-ic">
+              <i class="fab fa-google-plus-g white-text mr-4"> </i>
+            </a>
+            <!--Linkedin -->
+            <a class="li-ic">
+              <i class="fab fa-linkedin-in white-text mr-4"> </i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic">
+              <i class="fab fa-instagram white-text"> </i>
+            </a>
+
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row-->
+
+      </div>
+    </div>
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left mt-5">
+
+      <!-- Grid row -->
+      <div class="row mt-3 dark-grey-text">
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+
+          <!-- Content -->
+          <h6 class="text-uppercase font-weight-bold">Company name</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit.</p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">Products</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <a class="dark-grey-text" href="#!">MDBootstrap</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="#!">MDWordPress</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="#!">BrandFlow</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="#!">Bootstrap Angular</a>
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <a class="dark-grey-text" href="#!">Your Account</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="#!">Become an Affiliate</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="#!">Shipping Rates</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="#!">Help</a>
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">Contact</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+          <p>
+            <i class="fas fa-envelope mr-3"></i> info@example.com</p>
+          <p>
+            <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+          <p>
+            <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center text-black-50 py-3">© 2018 Copyright:
+      <a class="dark-grey-text" href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+      <!--Footer-->
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+      integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+      integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous">
+    </script>
+    <script src="../scripts/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Appointments</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="../styles/appointments.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link rel="stylesheet"
+        href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+        integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+
+<body class="container-fluid" style="padding: 0; overflow-x: hidden;">
+
+
+    <div class="container-fluid" style="padding: 10%;">
+
+
+        <div class="row col-lg-12">
+                <div class="col-md-7 col-sm-12" id="formContainer">
+                        <div class="row col-lg-12"  style="margin-bottom: 5%;">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-5 col-sm-12">
+                                <input id="datepicker" class="form-control" />
+                            </div>
+            
+                            <div class="col-md-5 col-sm-12">
+                                <input id="timepicker" class="form-control" />
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
+
+                        <div class="row col-lg-12" id="error">
+                            <div class="col-md-12 col-sm-12 text-center">
+                                    <p>Unavailable. Please choose another date and time.</p>
+                            </div>
+                        </div>
+            
+            
+                        <div class="row col-lg-12" style="margin-bottom: 5%;">
+            
+                            <div class="col-md-1"></div>
+                            <div class="col-md-10">
+                                <select class="selectpicker form-control" multiple data-live-search="true"s>
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                  </select>
+                            </div>
+                            <div class="col-md-1"></div>
+                  
+                        </div>
+            
+                        <div class="row col-lg-12"  style="margin-bottom: 5%;">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-10 col-sm-12">
+                                <!--Textarea with icon prefix-->
+                                <div>
+                                    <i class="fas fa-pencil-alt prefix inputIcons" ></i>
+                                    <textarea id="form22" class="md-textarea form-control" rows="3" placeholder="ADDITIONNAL COMMENTS"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
+            
+                        <div class="row col-lg-12" id="carouselContainer">
+                            <div class="carousel-wrapper">
+                                <div class="carousel" data-flickity>
+            
+                                    <div class="carousel-cell">
+            
+                                        <p class="name">CHRISTY ABI KANAAN</p>
+                                        <img src="../assets/images/employee2.jpg" class="carousel-thumbnail" />
+                                        <!-- <p>Christy Abi Kanaan</p> -->
+                                        <div>
+                                            <p class="name" style="float: left;">PHYSICAL THERAPIST</p>
+                                            <img src="../assets/icons/thumbs-up.svg" class="carousel-like not-liked">
+                                        </div>
+            
+            
+                                    </div>
+                                    <div class="carousel-cell">
+            
+                                        <p class="name">CHRISTY ABI KANAAN</p>
+                                        <img src="../assets/images/employee2.jpg" class="carousel-thumbnail" />
+                                        <!-- <p>Christy Abi Kanaan</p> -->
+                                        <div>
+                                            <p class="name" style="float: left;">PHYSICAL THERAPIST</p>
+                                            <img src="../assets/icons/thumbs-up.svg" class="carousel-like not-liked">
+                                        </div>
+            
+            
+                                    </div>
+                                    <div class="carousel-cell">
+            
+                                        <p class="name">CHRISTY ABI KANAAN</p>
+                                        <img src="../assets/images/employee2.jpg" class="carousel-thumbnail" />
+                                        <!-- <p>Christy Abi Kanaan</p> -->
+                                        <div>
+                                            <p class="name" style="float: left;">PHYSICAL THERAPIST</p>
+                                            <img src="../assets/icons/thumbs-up.svg" class="carousel-like not-liked">
+                                        </div>
+            
+            
+                                    </div>
+            
+                                    <div class="carousel-cell">
+            
+                                        <p class="name">CHRISTY ABI KANAAN</p>
+                                        <img src="../assets/images/employee2.jpg" class="carousel-thumbnail" />
+                                        <!-- <p>Christy Abi Kanaan</p> -->
+                                        <div>
+                                            <p class="name" style="float: left;">PHYSICAL THERAPIST</p>
+                                            <img src="../assets/icons/thumbs-up.svg" class="carousel-like not-liked">
+                                        </div>
+            
+            
+                                    </div>
+            
+                                    <div class="carousel-cell">
+            
+                                        <p class="name">CHRISTY ABI KANAAN</p>
+                                        <img src="../assets/images/employee2.jpg" class="carousel-thumbnail" />
+                                        <!-- <p>Christy Abi Kanaan</p> -->
+                                        <div>
+                                            <p class="name" style="float: left;">PHYSICAL THERAPIST</p>
+                                            <img src="../assets/icons/thumbs-up.svg" class="carousel-like not-liked">
+                                        </div>
+            
+            
+                                    </div>
+                                    <div class="carousel-cell">
+            
+                                        <p class="name">CHRISTY ABI KANAAN</p>
+                                        <img src="../assets/images/employee2.jpg" class="carousel-thumbnail" />
+                                        <!-- <p>Christy Abi Kanaan</p> -->
+                                        <div>
+                                            <p class="name" style="float: left;">PHYSICAL THERAPIST</p>
+                                            <img src="../assets/icons/thumbs-up.svg" class="carousel-like not-liked">
+                                        </div>
+                                        <!-- <div class="line"></div>
+                                                                    <div class="price">
+                                                                      <span>225<sup>€</sup></span>
+                                                                    </div> -->
+            
+            
+                                    </div>
+            
+                                </div>
+                            </div>
+            
+                        </div>
+            
+                        <div class="row col-lg-12">
+                                <!-- Sign up button -->
+                                <button id="appointmentBtn"
+                                  class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0 col-md-4 col-sm-12"
+                                  type="submit">TAKE APPOINTMENT</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-1">
+                        
+                    </div>
+
+                    <div class="col-md-4 col-sm-12">
+                            <div id="rightSection">
+                                    <header><h5>BUSINESS HOURS</h5></header>
+
+                                    <p class="hourText">Mon: 7:00 am - 5:00 pm</p>
+                                    <p class="hourText">Tue: 7:00 am - Noon</p>
+                                    <p class="hourText">Wed: 7:00 am - 5:00 pm</p>
+                                    <p class="hourText">Thur: 7:00 am - 5:00 pm</p>
+                                    <p class="hourText">Fri: 7:00 am - 5:00 pm</p>
+                
+                            </div>
+                </div>
+            
+        </div>
+    
+     
+    </div>
+
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+        integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+        integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+    <script src="../scripts/appointments.js"></script>
+
+</body>
+
+
+</html>
