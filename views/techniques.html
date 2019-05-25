@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Treatments</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="../styles/treatments.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <link rel="stylesheet"
+    href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+    integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+
+<body class="container-fluid" style="overflow-x: hidden; padding: 0;">
+
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark primary-color"
+    style="background-color: #1B7BBA;width: 100%; position: fixed; padding: 1% 10%; top: 0;">
+
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="index.html" style="width: 13%; padding: 0;">
+      <img src="../assets/images/logo.png" width="70%" height="100%">
+    </a>
+
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+      aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+
+      <!-- Links -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">About</a>
+          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="../views/aboutus.html">About Us</a>
+            <a class="dropdown-item" href="../views/reviews.html">Reviews</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false" style="color: hsla(0,0%,100%,.5) !important;">Treatments</a>
+          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="../views/conditions.html">Conditions We Treat</a>
+            <a class="dropdown-item" href="../views/techniques.html">Techniques</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="../views/appointments.html">Appointment</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../views/contact.html">Contact Us
+            <!-- <span class="sr-only">(current)</span> -->
+          </a>
+        </li>
+
+        <li class="nav-item" id="loginNav">
+          <a class="nav-link" data-toggle="modal" data-target="#modalLoginForm" href="">Log In</a>
+        </li>
+
+        <li class="nav-item" id="signupNav">
+          <a class="nav-link" href="../views/signup.html">Sign Up</a>
+        </li>
+
+        <li class="nav-item dropdown" id="myAccountNav" style="display: none;">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">My Account</a>
+          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="../views/patient-form.html">My Info</a>
+            <a class="dropdown-item" href="#">Log Out</a>
+          </div>
+        </li>
+
+      </ul>
+      <!-- Links -->
+
+      <form class="form-inline">
+        <div class="md-form my-0">
+          <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"> -->
+
+          <!-- <script>
+              (function() {
+                var cx = '015812204710777810795:e64yqemmsc0';
+                var gcse = document.createElement('script');
+                gcse.type = 'text/javascript';
+                gcse.async = true;
+                gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(gcse, s);
+              })();
+            </script>
+            <gcse:search enableAutoComplete="true"></gcse:search> -->
+
+        </div>
+      </form>
+    </div>
+    <!-- Collapsible content -->
+
+  </nav>
+  <!--/.Navbar-->
+
+  <!-- <div class="row col-lg-12" style="padding: 0; margin: 0;">
+
+        <div class="col-md-12 col-sm-12">
+
+            <div  style="background:url('../assets/images/cryotherapy-image.jpg') no-repeat center center; background-size: cover;" class="row treatmentContainer">
+                
+                <div class="layer">
+                   
+               </div>
+               
+               <div class="treatmentText col-md-6" style="position: absolute;     padding: 7%;">
+
+                <h3 class="treatmentTitle">Cryotherapy</h3>
+
+                <p>   The most popular form of cryotherapy involves sitting in a cryotherapy booth for 3–5 minutes.<br>
+                        Very cold temperatures can be used to freeze off warts or cancerous cells.
+                        It is generally safe, but it is important to talk to a doctor before trying cryotherapy.<br>
+                        Pregnant women, children, people with severe high blood pressure, and people with heart conditions should not try cryotherapy.
+                  
+                
+                </div>
+            </div>
+
+            <div  class="row treatmentContainerAlternative">
+                
+               
+               <div class="treatmentText col-md-6" style="position: absolute; padding: 7%; right: 1%;">
+
+                <h3 class="treatmentTitle">Cupping</h3>
+
+                <p>   Cupping is an ancient Chinese therapy that’s based on the belief that certain health problems can be caused by stagnant blood and a poor energy flow through your body.
+                        To fix or prevent those health issues, we apply cups—typically glass or silicone—to your skin to create a pressure that sucks your skin inward, according to the National Center for Complementary and Integrative Medicine.
+                        Generally, cupping is used to treat chronic pain—back pain and headaches, in particular.
+                  
+                
+                </div>
+            </div> -->
+
+            <!-- <div  class="row col-lg-12" style="padding: 0; margin-top: 7%;">
+              <ul class="breadcrumb">
+                <li>Treatments</li>
+                <li><a href="../views/techniques.html">Techniques</a></li>
+              </ul>
+            </div> -->
+  <div style="padding: 8% 5%;">
+    <div class="row col-lg-12 treatment">
+      <div class="col-md-6 col-sm-12 imgLayer"
+        style="background: url('../assets/images/cryotherapy.jpg') no-repeat center center; background-size: cover;">
+        <div class="layer">
+        </div>
+      </div>
+
+      <div class="col-md-6 col-sm-12 treatmentTextContainer" style="padding-right: 0 !important;">
+        <h3 class="title" style="color: #33CC9A !important;">CRYOTHERAPY</h3>
+        <p class="text">
+          The most popular form of cryotherapy involves sitting in a cryotherapy booth for 3–5 minutes.<br>
+          Very cold temperatures can be used to freeze off warts or cancerous cells.
+          It is generally safe, but it is important to talk to a doctor before trying cryotherapy.<br>
+          Pregnant women, children, people with severe high blood pressure, and people with heart conditions should not
+          try cryotherapy.
+        </p>
+
+      </div>
+    </div>
+
+    <div class="row col-lg-12 treatment">
+
+      <div class="col-md-6 col-sm-12 treatmentTextContainer" style="padding-left: 0 !important;">
+        <h3 class="title" style="color: #495057 !important;">CUPPING THERAPY</h3>
+        <p class="text">
+          Cupping is an ancient Chinese therapy that’s based on the belief that certain health problems can be caused by
+          stagnant blood and a poor energy flow through your body.
+          To fix or prevent those health issues, we apply cups—typically glass or silicone—to your skin to create a
+          pressure that sucks your skin inward, according to the National Center for Complementary and Integrative
+          Medicine.
+          Generally, cupping is used to treat chronic pain—back pain and headaches, in particular.
+        </p>
+
+      </div>
+
+      <div class="col-md-6 col-sm-12 imgLayer" style=" background: linear-gradient(
+                  rgba(0, 0, 0, 0.5), 
+                  rgba(0, 0, 0, 0.5)
+                  ), url(../assets/images/cupping-image.jpg) no-repeat;
+                     background-size: cover;">
+        <!-- <div class="layer">
+                 </div> -->
+      </div>
+    </div>
+
+
+    <div class="row col-lg-12 treatment">
+      <div class="col-md-6 col-sm-12 imgLayer"
+        style="background: url('../assets/images/hydrotherapy.jpg') no-repeat center center; background-size: cover;">
+        <div class="layer" style="background-color: rgb(17, 96, 137);">
+        </div>
+      </div>
+
+      <div class="col-md-6 col-sm-12 treatmentTextContainer" style="padding-right: 0 !important;">
+        <h3 class="title" style="color: rgb(17, 96, 137) !important;">HYDROTHERAPY</h3>
+        <p class="text">
+          Hydrotherapy is the use of water in the treatment of different conditions, including arthritis and related
+          rheumatic complaints. Hydrotherapy differs from swimming because it involves special exercises that you do in
+          a
+          warm-water pool. The water temperature is usually 33–36ºC, which is warmer than a typical swimming pool.
+          Hydrotherapy is beneficial regardless of how many of your joints are affected. It’s sometimes used if you’ve
+          had
+          joint replacement surgery or if you have back pain, ankylosing spondylitis, psoriatic arthritis and
+          osteoarthritis, but it can be used for other types of arthritis.
+        </p>
+      </div>
+    </div>
+
+
+    <div class="row col-lg-12 treatment">
+
+
+      <div class="col-md-6 col-sm-12 treatmentTextContainer" style="padding-left: 0 !important;">
+        <h3 class="title" style="color: #33CC9A !important;">INFRARED THERAPY</h3>
+        <p class="text">
+          Infrared therapy is a method that uses light to treat acute or chronic pain. It is a simple and painless
+          therapy
+          that is being studied for use in various fields of medicine.
+          Unlike ultraviolet light - which has damaging effects upon the tissues and cells of the body - infrared light
+          helps cells regenerate or repair themselves. Infrared light also improves the circulation of oxygen-rich blood
+          in the body, promoting faster healing of deep tissues and relieving pain.
+        </p>
+      </div>
+
+      <div class="col-md-6 col-sm-12 imgLayer"
+        style="background: url('../assets/images/infrared.jpg') no-repeat center center; background-size: cover;">
+        <div class="layer">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row col-lg-12 treatment">
+
+      <div class="col-md-6 col-sm-12 imgLayer" style=" background: linear-gradient(
+            rgba(0, 0, 0, 0.5), 
+            rgba(0, 0, 0, 0.5)
+            ), url(../assets/images/strengthening-exercices.jpg) no-repeat;
+               background-size: cover;">
+        <!-- <div class="layer">
+           </div> -->
+      </div>
+
+      <div class="col-md-6 col-sm-12 treatmentTextContainer" style="padding-right: 0 !important;">
+        <h3 class="title" style="color: #495057 !important;">STRENGTHENING EXERCICES</h3>
+        <p class="text">
+          Exercise is a vital part of treating the spine after injury or surgery. A regular exercise routine helps
+          patients
+          improve mobility and strength, minimize recurrence, and reduces the severity and duration of possible future
+          episodes of neck and arm pain.
+          Exercises can be divided into three basic groups:
+          <ul class="text">
+            <li>Strengthening</li>
+            <li>Stretching or Flexibility</li>
+            <li>Low-impact Aerobic</li>
+          </ul>
+
+        </p>
+
+      </div>
+
+      <div class="row col-lg-12 treatment">
+
+        <div class="col-md-6 col-sm-12 treatmentTextContainer" style="padding-left: 0 !important;">
+          <h3 class="title" style="color: rgb(17, 96, 137) !important;">MANIPULATIVE THERAPY</h3>
+          <p class="text">
+            Manipulative therapies include chiropractic, osteopathy and manual medicine. They’re used mainly for:
+            <ul class="text">
+              <li>musculoskeletal problems, including spine, neck and shoulder disorders</li>
+              <li>joint, posture and muscle problems</li>
+              <li>sciatica</li>
+              <li>sports injuries</li>
+              <li>whiplash</li>
+              <li>repetitive strain injury (RSI).</li>
+            </ul>
+
+
+
+          </p>
+        </div>
+
+        <div class="col-md-6 col-sm-12 imgLayer"
+          style="background: url('../assets/images/manipulative-therapy.png') no-repeat center center; background-size: cover;">
+          <div class="layer" style="background-color: rgb(17, 96, 137);">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row col-lg-12 treatment">
+
+
+        <div class="col-md-6 col-sm-12 imgLayer"
+          style="background: url('../assets/images/hot-packs.jpeg') no-repeat center center; background-size: cover;">
+          <div class="layer">
+          </div>
+        </div>
+
+        <div class="col-md-6 col-sm-12 treatmentTextContainer" style="padding-right: 0 !important;">
+          <h3 class="title" style="color: #33CC9A !important;">HOT PACKS THERAPY</h3>
+          <p class="text">
+            Hot packs are a type of physical modality often used in physical therapy clinics. They are applied to your
+            injured body part by your physical therapist. Physical therapists wrap moist hot packs in several layers of
+            towels and the hot packs are then applied directly on the exposed area that needs treatment.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="row col-lg-12 treatment">
+
+        <div class="col-md-6 col-sm-12 treatmentTextContainer" style="padding-left: 0 !important;">
+          <h3 class="title" style="color: #495057 !important;">ELECTROTHERAPY</h3>
+          <p class="text">
+            Electrotherapy includes a range of treatments using electricity to reduce pain, improve circulation, repair
+            tissues, strengthen muscles, and promote bone growth, leading to improvements in physical functioning.
+            Electrotherapy units usually consist of a battery-powered device connected by wires to adhesive electrode
+            pads which are placed on the skin. The electrode pads are sticky, so they will adhere to the skin. Once the
+            electrodes are attached and the unit is turned on, a mild electric current is sent to the skin via the
+            electrode.
+          </p>
+
+        </div>
+
+        <div class="col-md-6 col-sm-12 imgLayer" style=" background: linear-gradient(
+                    rgba(0, 0, 0, 0.5), 
+                    rgba(0, 0, 0, 0.5)
+                    ), url(../assets/images/electrotherapy.jpg) no-repeat;
+                       background-size: cover;">
+          <!-- <div class="layer">
+                   </div> -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="page-footer font-small blue-grey lighten-5" style="width: 100%;">
+
+    <div style="background-color: #33CC9A; ">
+      <div class="container">
+
+        <!-- Grid row-->
+        <div class="row py-4 d-flex align-items-center">
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+            <h6 class="mb-0">Get connected with us on social networks!</h6>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-7 text-center text-md-right" id="socialMediaContainer">
+
+            <!-- Facebook -->
+            <a class="fb-ic">
+              <i class="fab fa-facebook-f white-text mr-4"> </i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic">
+              <i class="fab fa-twitter white-text mr-4"> </i>
+            </a>
+            <!-- Google +-->
+            <a class="gplus-ic">
+              <i class="fab fa-google-plus-g white-text mr-4"> </i>
+            </a>
+            <!--Linkedin -->
+            <a class="li-ic">
+              <i class="fab fa-linkedin-in white-text mr-4"> </i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic">
+              <i class="fab fa-instagram white-text"> </i>
+            </a>
+
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row-->
+
+      </div>
+    </div>
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left mt-5">
+
+      <!-- Grid row -->
+      <div class="row mt-3 dark-grey-text">
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+
+          <!-- Content -->
+          <h6 class="text-uppercase font-weight-bold">Live Free Physical Therapy</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            Discover the solution to easy living and <a href="../views/signup.html">join us</a> now.
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">LINKS</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <a class="dark-grey-text" href="../views/aboutus.html">About Us</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="../views/reviews.html">Reviews</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="../views/conditions.html">Conditions</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="../views/techniques.html">Techniques</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="../views/appointments.html">Appointment</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="../views/contact.html">Contact Us</a>
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+          <!-- Links -->
+          <!-- <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+            <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+            <p>
+              <a class="dark-grey-text" href="#!">Your Account</a>
+            </p>
+            <p>
+              <a class="dark-grey-text" href="#!">Become an Affiliate</a>
+            </p>
+            <p>
+              <a class="dark-grey-text" href="#!">Shipping Rates</a>
+            </p>
+            <p>
+              <a class="dark-grey-text" href="#!">Help</a>
+            </p> -->
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">Contact</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <i class="fas fa-home mr-3"></i> Baabdat, Principal Road</p>
+          <p>
+            <i class="fas fa-envelope mr-3"></i> livefreeclinic@gmail.com</p>
+          <p>
+            <i class="fas fa-phone mr-3"></i> + 961 04 234 567 </p>
+          <p>
+            <i class="fas fa-print mr-3"></i> + 961 04 234 567</p>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center text-black-50 py-3">© 2019 Copyright:
+      <a class="dark-grey-text" href=""> Marianne Abi Kanaan</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+    integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous">
+  </script>
+  <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+    integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous">
+  </script>
+  <script src="../scripts/treatments.js"></script>
+</body>
+
+</html>

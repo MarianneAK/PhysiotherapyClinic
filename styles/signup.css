@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.text{
+    word-spacing: 1px;
+    font-family: Lato; 
+    font-size: 18px; 
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+    line-height: 34.2px; 
+    color: #495057;
+}
+
+.title{
+    font-family: "Open Sans" !important;
+    color: #1B7BBA !important;
+}
+
+.form-row{
+    margin: 6% 0;
+}
+
+#leftSection{
+    background-image: url("../assets/images/signup-image.jpg");
+    background-size: cover;
+    padding: 0;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+min-height: 442px;
+width: 100%;
+}
+
+.layer {
+    background-color: #02ac6f;
+    opacity: 0.5;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#signUpBtn{
+    margin: auto;
+    background-color: #33CC9A;
+    color: white;
+}
+
+#signUpBtn:hover{
+    background-color: #FFF;
+    color: #33CC9A;
+}
+
+.field-icon {
+    float: right;
+    margin-left: -25px;
+    margin-top: -25px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .md-form{
+      margin: 5% 0;
+  }
+
+  .navbar-dark .navbar-nav .nav-link{
+    cursor: pointer;
+    color: white !important;
+}

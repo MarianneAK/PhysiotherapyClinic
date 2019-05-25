@@ -5,13 +5,25 @@
 <head>
   <title>Index</title>
   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../styles/index.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
   <link rel="stylesheet"
     href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
     integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.min.css">
+  <script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
+  <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+  <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 
@@ -20,10 +32,13 @@
 
 
   <!--Navbar-->
-  <nav class="navbar navbar-expand-lg navbar-dark primary-color" style="background: 0 0; width: 100%; position: fixed; height: 70px;">
+  <nav class="navbar navbar-expand-lg navbar-dark primary-color fixed-top"
+    style="background: 0 0; width: 100%; position: fixed; padding: 1% 10%;">
 
     <!-- Navbar brand -->
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="index.html" style="width: 13%; padding: 0;">
+      <img src="../assets/images/logo.png" width="70%" height="100%" alt="live free physical therapy">
+    </a>
 
     <!-- Collapse button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
@@ -36,42 +51,71 @@
 
       <!-- Links -->
       <ul class="navbar-nav ml-auto">
-          <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false">About</a>
-              <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">About Us</a>
-                <a class="dropdown-item" href="#">Reviews</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                  aria-expanded="false">Treatments</a>
-                <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Conditions</a>
-                  <a class="dropdown-item" href="#">Techniques</a>
-                </div>
-              </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Contact Us
-            <span class="sr-only">(current)</span>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">About</a>
+          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="../views/aboutus.html">About Us</a>
+            <a class="dropdown-item" href="../views/reviews.html">Reviews</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">Treatments</a>
+          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="../views/conditions.html">Conditions We Treat</a>
+            <a class="dropdown-item" href="../views/techniques.html">Techniques</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="../views/appointments.html">Appointment</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../views/contact.html">Contact Us
+            <!-- <span class="sr-only">(current)</span> -->
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Appointment</a>
+
+        <li class="nav-item" id="loginNav">
+          <a class="nav-link" data-toggle="modal" data-target="#modalLoginForm" href="">Log In</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Log In</a>
+
+        <li class="nav-item" id="signupNav">
+          <a class="nav-link"  href="../views/signup.html">Sign Up</a>
+        </li>
+
+        <li class="nav-item dropdown" id="myAccountNav" style="display: none;">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">My Account</a>
+          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="../views/patient-form.html">My Info</a>
+            <a class="dropdown-item" href="#">Log Out</a>
+          </div>
         </li>
 
       </ul>
       <!-- Links -->
 
-      <!-- <form class="form-inline">
+      <form class="form-inline">
         <div class="md-form my-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"> -->
+
+          <!-- <script>
+              (function() {
+                var cx = '015812204710777810795:e64yqemmsc0';
+                var gcse = document.createElement('script');
+                gcse.type = 'text/javascript';
+                gcse.async = true;
+                gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(gcse, s);
+              })();
+            </script>
+            <gcse:search enableAutoComplete="true"></gcse:search> -->
+
         </div>
-      </form> -->
+      </form>
     </div>
     <!-- Collapsible content -->
 
@@ -87,287 +131,455 @@
     <div class="row" style="padding: 0; margin: 0;">
       <div class="col-lg-12" style="padding: 0;">
         <video autoplay="true" loop="true" id="video" muted="muted" width="100%">
-          <source src="../assets/landing-page-video.mp4" type="video/mp4">
+          <source src="../assets/videos/landing-page-video.mp4" type="video/mp4">
         </video>
 
-        <!-- <div class="content">
-                    <h1>Heading</h1>
-                    <p>Lorem ipsum...</p>
-                    
-                    <button id="videoBtn" onclick="controlVideo()">Pause</button>
-           </div>    -->
+        <div class="content">
+          <div style=" margin-top: 22%; display: inline-block;">
+
+            <p style="font-size: 3vmin;">REHAB & PHYSICAL THERAPY</p>
+            <h1 style="font-size: 5vmin;">GET YOUR FITNESS BACK</h1>
+
+
+            <button id="videoBtn" onclick="controlVideo()">Pause</button>
+          </div>
+        </div>
       </div>
 
     </div>
   </div>
 
-    <!--video-->
+  <!--video-->
 
 
-    <!--Sign Up-->
-    <div id="signUpContainer" class="container-fluid" style="padding: 5%; background-color: #fafafa;">
 
-      <div class="row">
 
-        <div class="col-md-6 col-sm-12" style="padding: 5% 3%;">
-          <h1>ARE YOU IN PAIN?</h1>
-          <h3>Sign Up now and get your free consultation !</h3>
-        </div>
+  <!--Book-->
+  <div id="bookContainer" class="container-fluid" style="padding: 5%; background-color: #fafafa; display: none;">
 
-        <div class="col-md-6 col-sm-12">
+    <div class="row">
+
+      <div class="col-md-6 col-sm-12" style="padding: 5% 3%;">
+        <h1 class="title">ARE YOU IN PAIN?</h1>
+        <p class="text">
+          If “Yes”, book an appointment now !
+        </p>
+      </div>
+
+      <div class="col-md-6 col-sm-12">
+        <!-- Material form register -->
+        <div class="card">
+
+          <h5 class="card-header info-color white-text text-center py-4">
+            <strong style="color:#33CC9A;">BOOK AN APPOINTMENT</strong>
+          </h5>
+
+          <!--Card content-->
+          <div class="card-body px-lg-5 pt-0">
+
+            <!-- Form -->
+            <form class="text-center" style=" margin-top: 3%;">
+
+
+              <div class="row col-lg-12" style="margin-bottom: 5%;">
+                <div class="col-md-1"></div>
+                <div class="col-md-5 col-sm-12">
+                  <input id="datepicker" style="margin-bottom: 2%;" required readonly />
+                </div>
+
+                <div class="col-md-5 col-sm-12">
+                  <input id="timepicker"  style="margin-bottom: 2%;" readonly />
+                </div>
+                <div class="col-md-1"></div>
+              </div>
+
+              <div class="row col-lg-12" id="error" style="display: none;">
+                <div class="col-md-12 col-sm-12 text-center">
+                  <!-- <p>Unavailable. Please choose another date and time.</p> -->
+
+                  <div class="alert alert-danger" role="alert">
+                    Unavailable. Please choose another date and time.
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="row col-lg-12" style="margin-bottom: 5%;">
+                <button id="bookBtn"
+                  class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0 col-md-4 col-sm-12"
+                  type="submit">TAKE APPOINTMENT</button>
+              </div>
+
+
+            </form>
+            <!-- Form -->
+
+          </div>
           <!-- Material form register -->
-          <div class="card">
-
-            <h5 class="card-header info-color white-text text-center py-4">
-              <strong>Sign up</strong>
-            </h5>
-
-            <!--Card content-->
-            <div class="card-body px-lg-5 pt-0">
-
-              <!-- Form -->
-              <form class="text-center" style="color: #757575;">
-
-                <div class="form-row">
-                  <div class="col">
-                    <!-- First name -->
-                    <div class="md-form">
-                      <input type="text" id="materialRegisterFormFirstName" class="form-control"
-                        placeholder="First Name">
-                    </div>
-                  </div>
-                  <div class="col">
-                    <!-- Last name -->
-                    <div class="md-form">
-                      <input type="text" id="materialRegisterFormLastName" class="form-control" placeholder="Last Name">
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form-row">
-                  <div class="col">
-                    <!-- First name -->
-                    <div class="md-form">
-                      <input type="email" id="materialRegisterFormFirstName" class="form-control" placeholder="Email">
-                    </div>
-                  </div>
-                  <div class="col">
-                    <!-- Last name -->
-                    <div class="md-form">
-                      <input type="text" id="materialRegisterFormLastName" class="form-control" placeholder="Phone">
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form-row">
-                  <div class="col">
-                    <!-- First name -->
-                    <div class="md-form">
-                      <textarea id="materialRegisterFormFirstName" class="form-control"
-                        placeholder="Additionnal Comments"></textarea>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form-row">
-                  <div class="col">
-                    <!-- Sign up button -->
-                    <button id="signUpBtn"
-                      class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0 col-md-4 col-sm-12"
-                      type="submit">Sign in</button>
-                  </div>
-                </div>
-
-              </form>
-              <!-- Form -->
-
-            </div>
-            <!-- Material form register -->
-          </div>
-        </div>
-
-      </div>
-</div>
-
-      <!--Sign Up-->
-
-
-
-
-      <!-- Conditions-->
-      <div id="conditionsContainer" class="container-fluid" style="padding: 0; padding-top: 3%;">
-
-        <div class="row">
-          <div class="col-md-3"></div>
-          <div class="col-md-4 col-sm-12" id="humanBody">
-            <!-- <img src="../assets/human-body.png" alt="human-body" width="100%"> -->
-          
-                <a id="bodyPart1" title="Head and Neck" href="https://rehabdynamicsllc.com/body_parts/head-and-neck/"></a>
-                <a id="bodyPart2" title="Back" href="https://rehabdynamicsllc.com/body_parts/back/"></a>
-                <a id="bodyPart3" title="Foot and Ankle" href="https://rehabdynamicsllc.com/body_parts/foot-and-ankle/"></a>
-                <a id="bodyPart4" title="Shoulder" href="https://rehabdynamicsllc.com/body_parts/foot-and-ankle/"></a>
-                <a id="bodyPart5" title="Elbow, Wrist and Hand" href="https://rehabdynamicsllc.com/body_parts/foot-and-ankle/"></a>
-                <a id="bodyPart6" title="Hip" href="https://rehabdynamicsllc.com/body_parts/foot-and-ankle/"></a>
-                <a id="bodyPart7" title="Knee, Balance and Walking" href="https://rehabdynamicsllc.com/body_parts/foot-and-ankle/"></a>
-
-          </div>
-          <div class="col-md-3 col-sm-12">
-            <h4>We treat and help patients with many different conditions.\n
-              Click on the areas highlighted on the body diagram for information on common conditions we treat and how physical therapy can help..</h4>
-          </div>
-          <div class="col-md-2"></div>
         </div>
       </div>
 
-      <!-- Conditions-->
+    </div>
+  </div>
+
+  <!--Book-->
 
 
-      <!-- Treatments -->
-      <div id="treatmentsContainer" class="container-fluid">
+  <!--Sign Up-->
+  <div id="signUpContainer" class="container-fluid" style="padding: 5%; background-color: #fafafa;">
 
-          <div class="row">
-              <div class="col-md-4">
-                  <div class="flip-card">
-                      <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                          <img src="../assets/icons/massage.svg" alt="Avatar" class="cardIcon">
-                          <p class="cardTitle">MANIPULATIVE THERAPY</p>
-                        </div>
-                        <div class="flip-card-back">
-                          <p>Manipulative therapy, is a physical treatment to treat musculoskeletal pain and disability; it most includes kneading and manipulation of muscles, joint mobilization and joint manipulation.</p> 
-                        </div>
-                      </div>
-                    </div>
-              </div>
+    <div class="row">
 
-              <div class="col-md-4">
-                  <div class="flip-card">
-                      <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                          <img src="../assets/icons/cupping.svg" alt="Avatar" class="cardIcon">
-                          <p class="cardTitle">CUPPING</p>
-                        </div>
-                        <div class="flip-card-back">
-                          <p>Cupping therapy is an ancient form of alternative medicine in which a therapist puts special cups on your skin for a few minutes to create suction, which helps with pain, inflammation, blood flow, relaxation and well-being.</p> 
-                        </div>
-                      </div>
-                    </div>
-              </div>
+      <div class="col-md-6 col-sm-12" style="padding: 5% 6%;">
+        <h1 class="title">ARE YOU IN PAIN?</h1>
+        <p class="text">
+          If “Yes”, join us to get a free consultation with our <br> qualified Physical Therapists.
+        </p>
+      </div>
 
-              <div class="col-md-4">
-                  <div class="flip-card">
-                      <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                          <img src="../assets/icons/swimming-pool.svg" alt="Avatar" class="cardIcon">
-                          <p class="cardTitle">HYDROTHERAPY</p>
-                        </div>
-                        <div class="flip-card-back">
-                          <p>Hydrotherapy is the use of water in the treatment of different conditions, including arthritis and related rheumatic complaints. It involves special exercises that you do in a warm-water pool.</p> 
-                        </div>
-                      </div>
-                    </div>
-              </div>
+      <div class="col-md-6 col-sm-12">
+        <!-- Material form register -->
+        <div class="card">
 
-          </div>
+          <h5 class="card-header info-color white-text text-center py-4">
+            <strong style="color:#33CC9A;">SIGN UP</strong>
+          </h5>
 
+          <!--Card content-->
+          <div class="card-body px-lg-5 pt-0 text-center" style="color: #757575; margin-top: 5%;">
 
-          <div class="row" style="margin-top: 2%;">
-              <div class="col-md-4">
-                  <div class="flip-card">
-                      <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                          <img src="../assets/icons/cold.svg" alt="Avatar" class="cardIcon">
-                          <p class="cardTitle">CRYOTHERAPY</p>
-                        </div>
-                        <div class="flip-card-back">
-                          <p>Cryotherapy is the local or general use of low temperatures in medical therapy. Cryotherapy may be used to treat a variety of tissue lesions.</p> 
-                        </div>
-                      </div>
-                    </div>
-              </div>
+            <!-- Form -->
+            <!-- <form class="text-center" > -->
 
-              <div class="col-md-4">
-                      <div class="flip-card">
-                          <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                              <img src="../assets/icons/muscle.svg" alt="Avatar" class="cardIcon">
-                              <p class="cardTitle">STRENGHENING EXERCICES</p>
-                            </div>
-                            <div class="flip-card-back">
-                              <p>Muscle and bone strenghening exercices such as stretching, chin tuck and many more.</p> 
-                            </div>
-                          </div>
-                        </div>
+              <div class="row">
+                <div class="col-md-6 col-sm-12">
+                  <!-- First name -->
+                  <div class="md-form">
+                    <input type="text" id="firstName" class="form-control" placeholder="First Name *" required>
+                  </div>
                 </div>
-
-              <div class="col-md-4">
-                  <div class="flip-card">
-                      <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                          <img src="../assets/icons/infrared.svg" alt="Avatar" class="cardIcon">
-                          <p class="cardTitle">INFRARED</p>
-                        </div>
-                        <div class="flip-card-back">
-                          <p>Infrared therapy is a  simple and painless therapy that uses light to treat acute or chronic pain.</p> 
-                        </div>
-                      </div>
-                    </div>
+                <div class="col-md-6 col-sm-12">
+                  <!-- Last name -->
+                  <div class="md-form">
+                    <input type="text" id="lastName" class="form-control" placeholder="Last Name *" required>
+                  </div>
+                </div>
               </div>
+
+              <div class="row">
+                <div class="col-md-6 col-sm-12">
+                  <!-- First name -->
+                  <div class="md-form">
+                    <input type="email" id="email" class="form-control" placeholder="Email *" required>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <!-- Last name -->
+                  <div class="md-form">
+                    <input type="password" id="passwordSignUp" class="form-control" placeholder="Password *" required>
+                    <span toggle="#passwordSignUp" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col">
+                  <!-- First name -->
+                  <div class="md-form">
+                    <textarea id="materialRegisterFormFirstName" class="form-control"
+                      placeholder="Additionnal Comments"></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <div id="signupError" style="display: none;">
+                <div class="alert alert-danger" role="alert">
+                  Email already registered.
+                </div>
+              </div>
+
               
+              <div id="errorFields" style="display: none;">
+                <div class="alert alert-danger" role="alert">
+                  Please fill all required fields.
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col">
+                  <!-- Sign up button -->
+                  <button id="signUpBtn"
+                    class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0 col-md-4 col-sm-12">SIGN UP</button>
+                </div>
+              </div>
+
+            <!-- </form> -->
+            <!-- Form -->
+
+          </div>
+          <!-- Material form register -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!--Sign Up-->
+
+
+
+  <!-- Conditions-->
+  <div id="conditionsContainer" style="padding: 3% 0;">
+
+    <div class="row">
+      <div class="col-md-2"></div>
+
+
+      <div class="col-md-4 col-sm-12" id="humanBody" style="overflow: hidden;">
+        <!-- <img src="../assets/human-body.png" alt="human-body" width="100%"> -->
+
+        <a id="bodyPart1" class="bodyPart" body-part="head" title="Head and Neck" href="conditions.html?part=head"></a>
+        <a id="bodyPart2" class="bodyPart" body-part="back" title="Back" href="conditions.html?part=back"></a>
+        <a id="bodyPart3" class="bodyPart" body-part="foot" title="Foot and Ankle" href="conditions.html?part=foot"></a>
+        <a id="bodyPart4" class="bodyPart" body-part="shoulder" title="Shoulder"
+          href="conditions.html?part=shoulder"></a>
+        <a id="bodyPart5" class="bodyPart" body-part="hand" title="Elbow, Wrist and Hand"
+          href="conditions.html?part=hand"></a>
+        <a id="bodyPart6" class="bodyPart" body-part="hip" title="Hip" href="conditions.html?part=hip"></a>
+        <a id="bodyPart7" class="bodyPart" body-part="knee" title="Knee, Balance and Walking"
+          href="conditions.html?part=knee"></a>
+
+      </div>
+
+      <div class="col-md-4 col-sm-12" style="padding: 10% 3% 2% 2%;">
+        <h2 class="title">CONDITIONS WE TREAT</h2>
+        <p class="text">
+          Click on the areas highlighted on the body diagram for information on common conditions we treat and how
+          physical therapy can help.
+        </p>
+
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+
+  <!-- Conditions-->
+
+
+  <!-- Treatments -->
+  <div id="treatmentsContainer" class="container-fluid">
+
+    <div class="row" style="margin-bottom: 4%;">
+      <h2 class="title" style="margin: auto; color: white !important;">FEATURED TECHNIQUES</h2>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="flip-card" technique="MANIPULATIVE THERAPY">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../assets/icons/massage.svg" alt="massage manipulative therapy" class="cardIcon">
+              <p class="cardTitle">MANIPULATIVE THERAPY</p>
+            </div>
+            <div class="flip-card-back">
+              <p class="cardTitle">MANIPULATIVE THERAPY</p>
+              <p>Manipulative therapy, is a physical treatment to treat musculoskeletal pain and disability; it most
+                includes kneading and manipulation of muscles.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="flip-card" technique="CUPPING THERAPY">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../assets/icons/cupping.svg" alt="cupping therapy" class="cardIcon">
+              <p class="cardTitle">CUPPING THERAPY</p>
+            </div>
+            <div class="flip-card-back">
+              <p class="cardTitle">CUPPING THERAPY</p>
+              <p>Cupping therapy is a form of alternative medicine in which a therapist puts special cups on your skin,
+                which helps with pain, inflammation, and many more.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="flip-card" technique="HYDROTHERAPY">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../assets/icons/swimming-pool.svg" alt="hydrotherapy" class="cardIcon">
+              <p class="cardTitle">HYDROTHERAPY</p>
+            </div>
+            <div class="flip-card-back">
+              <p class="cardTitle">HYDROTHERAPY</p>
+              <p>Hydrotherapy involves special exercises that you do in a warm-water pool, which helps in arthritis and
+                related rheumatic complaints.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="flip-card" technique="CRYOTHERAPY">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../assets/icons/cold.svg" alt="Avatar" class="cardIcon">
+              <p class="cardTitle">CRYOTHERAPY</p>
+            </div>
+            <div class="flip-card-back">
+              <p class="cardTitle">CRYOTHERAPY</p>
+              <p>Cryotherapy is the local or general use of low temperatures in medical therapy. Cryotherapy may be used
+                to treat a variety of tissue lesions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="flip-card" technique="STRENGTHENING EXERCICES">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../assets/icons/muscle.svg" alt="STRENGTHENING exercises" class="cardIcon">
+              <p class="cardTitle">STRENGTHENING EXERCICES</p>
+            </div>
+            <div class="flip-card-back">
+              <p class="cardTitle">STRENGHENING EXERCICES</p>
+              <p>Muscle and bone strenghening exercices such as stretching, chin tuck and many more.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="flip-card" technique="INFRARED THERAPY">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../assets/icons/infrared.svg" alt="infrared therapy" class="cardIcon">
+              <p class="cardTitle">INFRARED THERAPY</p>
+            </div>
+            <div class="flip-card-back">
+              <p class="cardTitle">INFRARED THERAPY</p>
+              <p>Infrared therapy is a simple and painless therapy that uses light to treat acute or chronic pain.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <!-- Treatments -->
+
+
+  <!-- Meet the team -->
+
+  <div class="container" id="teamContainer">
+    <div class="row text-center" style="margin: 3% 0;">
+      <h3 class="title col-lg-12">MEET THE TEAM</h3>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-sm-12">
+        <div class="our-team">
+          <div class="pic">
+            <img src="../assets/images/therapist3.jpg" alt="Osteopathic Director christy abi kanaan">
+          </div>
+          <div class="team-content">
+            <h3 class="post-title">Christy Abi Kanaan<small>Osteopathic Director</small></h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-12">
+        <div class="our-team">
+          <div class="pic">
+            <img src="../assets/images/therapist2.jpg" alt="Chiropractic Director Anastasia Khoury">
+          </div>
+          <div class="team-content">
+            <h3 class="post-title">Anastasia Khoury<small>Chiropractic Director</small></h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-12">
+        <div class="our-team">
+          <div class="pic">
+            <img src="../assets/images/therapist1.jpg" alt="Massage Therapy Director Alexandre Hajj">
+          </div>
+          <div class="team-content">
+            <h3 class="post-title">Alexandre Hajj<small>Massage Therapy Director</small></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Meet the team -->
+
+
+  <!-- Login Modal -->
+
+
+  <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center" style="background-color: #33CC9A;">
+          <h4 class="modal-title w-100" style="color: white;">LOG IN</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body mx-3">
+          <div class="md-form mb-5" style=" margin-bottom: 1rem!important;">
+            <i class="fas fa-envelope prefix grey-text"></i>
+            <input type="email" id="loginEmail" class="form-control validate" placeholder="Email">
+            <!-- <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label> -->
           </div>
 
+          <div class="md-form mb-4">
+            <i class="fas fa-lock prefix grey-text"></i>
+            <input type="password" id="loginPass" class="form-control validate" placeholder="Password">
+            <span toggle="#loginPass" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+            <!-- <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label> -->
+          </div>
+
+
+          <p>Don't have an account ? <a href="signup.html">Sign Up</a></p>
+          <div id="loginError">
+            <div class="alert alert-danger" role="alert">
+              Wrong email or password. Please try again.
+            </div>
+          </div>
 
         </div>
 
-      <!-- Treatments -->
-
-
-      <!-- Meet the team -->
-
-      <div class="container" id="teamContainer">
-          <div class="row">
-              <div class="col-md-4 col-sm-12">
-                  <div class="our-team">
-                      <div class="pic">
-                          <img src="../assets/images/therapist3.jpg" alt="">
-                      </div>
-                      <div class="team-content">
-                          <h3 class="post-title">Christy Abi Kanaan<small>Osteopathic Director</small></h3>
-                      </div>
-                  </div>
-              </div>
-
-              <div class="col-md-4 col-sm-12">
-                  <div class="our-team">
-                      <div class="pic">
-                          <img src="../assets/images/therapist2.jpg" alt="">
-                      </div>
-                      <div class="team-content">
-                          <h3 class="post-title">Anastasia Khoury<small>Chiropractic Director</small></h3>
-                      </div>
-                  </div>
-              </div>
-
-              <div class="col-md-4 col-sm-12">
-                  <div class="our-team">
-                      <div class="pic">
-                          <img src="../assets/images/therapist1.jpg" alt="">
-                      </div>
-                      <div class="team-content">
-                          <h3 class="post-title">Alexandre Hajj<small>Massage Therapy Director</small></h3>
-                      </div>
-                  </div>
-              </div>
-          </div>
+        <div class="modal-footer d-flex justify-content-center">
+          <button id="loginBtn"
+            class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0 col-md-4 col-sm-12">Login</button>
+        </div>
       </div>
+    </div>
+  </div>
+  <!-- 
+<div class="text-center">
+  <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalLoginForm">Launch
+    Modal Login Form</a>
+</div> -->
 
-      <!-- Meet the team -->
+  <!-- Login Modal -->
 
-<!-- Footer -->
-<!-- Footer -->
-<footer class="page-footer font-small blue-grey lighten-5">
+  <!-- Footer -->
+  <footer class="page-footer font-small blue-grey lighten-5">
 
-    <div style="background-color: #21d192;">
+    <div style="background-color: #33CC9A;">
       <div class="container">
 
         <!-- Grid row-->
@@ -380,7 +592,7 @@
           <!-- Grid column -->
 
           <!-- Grid column -->
-          <div class="col-md-6 col-lg-7 text-center text-md-right">
+          <div class="col-md-6 col-lg-7 text-center text-md-right" id="socialMediaContainer">
 
             <!-- Facebook -->
             <a class="fb-ic">
@@ -422,10 +634,11 @@
         <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
 
           <!-- Content -->
-          <h6 class="text-uppercase font-weight-bold">Company name</h6>
+          <h6 class="text-uppercase font-weight-bold">Live Free Physical Therapy</h6>
           <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-          <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit.</p>
+          <p>
+            Discover the solution to easy living and <a href="../views/signup.html">join us</a> now.
+          </p>
 
         </div>
         <!-- Grid column -->
@@ -434,19 +647,24 @@
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
 
           <!-- Links -->
-          <h6 class="text-uppercase font-weight-bold">Products</h6>
+          <h6 class="text-uppercase font-weight-bold">LINKS</h6>
           <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
           <p>
-            <a class="dark-grey-text" href="#!">MDBootstrap</a>
+            <a class="dark-grey-text" href="../views/aboutus.html">About Us</a>
           </p>
           <p>
-            <a class="dark-grey-text" href="#!">MDWordPress</a>
+            <a class="dark-grey-text" href="../views/reviews.html">Reviews</a>
           </p>
           <p>
-            <a class="dark-grey-text" href="#!">BrandFlow</a>
+            <a class="dark-grey-text" href="../views/conditions.html">Conditions</a>
           </p>
           <p>
-            <a class="dark-grey-text" href="#!">Bootstrap Angular</a>
+            <a class="dark-grey-text" href="../views/techniques.html">Techniques</a>
+          <p>
+            <a class="dark-grey-text" href="../views/appointments.html">Appointment</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="../views/contact.html">Contact Us</a>
           </p>
 
         </div>
@@ -456,20 +674,20 @@
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
 
           <!-- Links -->
-          <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+          <h6 class="text-uppercase font-weight-bold">Your Account</h6>
           <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+  
           <p>
-            <a class="dark-grey-text" href="#!">Your Account</a>
+            <a class="dark-grey-text" href="#login">Login</a>
           </p>
           <p>
-            <a class="dark-grey-text" href="#!">Become an Affiliate</a>
+            <a class="dark-grey-text" href="../views/signup.html">Sign Up</a>
           </p>
+          
           <p>
-            <a class="dark-grey-text" href="#!">Shipping Rates</a>
+            <a class="dark-grey-text" href="../views/patient-form.html">Patient Info</a>
           </p>
-          <p>
-            <a class="dark-grey-text" href="#!">Help</a>
-          </p>
+        
 
         </div>
         <!-- Grid column -->
@@ -481,13 +699,13 @@
           <h6 class="text-uppercase font-weight-bold">Contact</h6>
           <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
           <p>
-            <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+            <i class="fas fa-home mr-3"></i> Baabdat, Principal Road</p>
           <p>
-            <i class="fas fa-envelope mr-3"></i> info@example.com</p>
+            <i class="fas fa-envelope mr-3"></i> livefreeclinic@gmail.com</p>
           <p>
-            <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+            <i class="fas fa-phone mr-3"></i> + 961 04 234 567 </p>
           <p>
-            <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+            <i class="fas fa-print mr-3"></i> + 961 04 234 567</p>
 
         </div>
         <!-- Grid column -->
@@ -499,27 +717,23 @@
     <!-- Footer Links -->
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center text-black-50 py-3">© 2018 Copyright:
-      <a class="dark-grey-text" href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+    <div class="footer-copyright text-center text-black-50 py-3">© 2019 Copyright:
+      <a class="dark-grey-text" href=""> Marianne Abi Kanaan</a>
     </div>
     <!-- Copyright -->
 
   </footer>
   <!-- Footer -->
-      <!--Footer-->
 
 
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
-    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
-      integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous">
-    </script>
-    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
-      integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous">
-    </script>
-    <script src="../scripts/index.js"></script>
+  <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+    integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous">
+  </script>
+  <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+    integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous">
+  </script>
+  <script src="../scripts/index.js"></script>
 </body>
 
 </html>

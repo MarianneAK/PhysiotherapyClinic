@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.text{
+  word-spacing: 1px;
+    font-family: Lato; 
+    font-size: 22px; 
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+    line-height: 34.2px; 
+    color: #495057;
+}
+
+.title{
+    font-family: "Open Sans" !important;
+    color: #1B7BBA !important;
+}
+
+#parallalaxContainer {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 100%;
+  justify-content: space-around;
+  position: relative;
+  width: 100%;
+}
+#parallalaxContainer section {
+  width: 100%;
+  height: 100vh;
+  flex: 1;
+  display: flex;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+}
+#parallalaxContainer section:nth-child(1) .image {
+  background-image: url(https://images.unsplash.com/photo-1463412855783-af97e375664b?iq=100&fm=jpg&w=1000);
+}
+#parallalaxContainer section:nth-child(2) .image {
+  background-image: url(../assets/images/about-background-2.jpeg);
+  background-size: cover;
+}
+#parallalaxContainer section:nth-child(3) .image {
+  background-image: url(../assets/images/baabdat-background.jpg);
+}
+#parallalaxContainer section:nth-child(4) .image {
+  /* background-image: url(https://images.unsplash.com/photo-1461080639469-66d73688fb21?iq=100&fm=jpg&w=1000); */
+}
+#parallalaxContainer section:nth-child(5) .image {
+  background-image: url(https://images.unsplash.com/photo-1460804198264-011ca89eaa43?iq=100&fm=jpg&w=1000);
+}
+#parallalaxContainer section:nth-child(6) .image {
+  background-image: url(https://images.unsplash.com/photo-1463123081488-789f998ac9c4?iq=100&fm=jpg&w=1000);
+}
+#parallalaxContainer section .image {
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 500;
+  opacity: 0.4;
+}
+#parallalaxContainer section .stuff {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 100%;
+  width: 100%;
+  max-width: 70%;
+  justify-content: center;
+  text-align: center;
+  z-index: 1000;
+  /* color: #e67e22; */
+  color: white;
+  margin: 0 auto;
+  font-size: 26px;
+  position: relative;
+}
+
+#parallalaxContainer section .sectionText{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 70%;
+  width: 100%;
+  max-width: 70%;
+  justify-content: center;
+  text-align: center;
+  z-index: 1000;
+  /* color: #e67e22; */
+  color: white;
+  margin: 0 auto;
+  font-size: 22px;
+  position: relative;
+  background-color: white;
+  /* box-shadow: rgba(0, 0, 0, 0.75) 0px 12px 39px -19px; */
+  background-color: rgba(0, 0, 0, 0.4);
+  
+}
+
+#parallalaxContainer section .stuff h2 {
+  margin: 0px;
+}
+
+#parallalaxContainer section .sectionText h2 {
+  margin: 0px;
+}
+
+#parallalaxContainer section .stuff:before, #parallalaxContainer section .stuff:after {
+  width: 100%;
+  height: 1px;
+  display: block;
+  /* background-color: #d35400; */
+  background-color: white;
+  content: "";
+  margin: 30px 0;
+}
+
+#parallalaxContainer section .sectionText:before, #parallalaxContainer section .sectionText:after {
+  width: 100%;
+  height: 1px;
+  display: block;
+  /* background-color: #d35400; */
+  /* background-color: white; */
+  content: "";
+  margin: 30px 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  color: inherit;
+  text-decoration: underline;
+}
+
+#section1{
+  background-color: white;
+  padding: 3%;
+}
+
+#section1Img{
+  width: 100%;
+}
+#contactUsBtn{
+  margin: auto;
+  background-color: #33CC9A;
+  color: white;
+}
+
+#contactUsBtn:hover{
+  background-color: #FFF;
+  color: #33CC9A;
+}
+
+#quoteSection{
+  background-color: white !important;
+  padding: 2%;
+  height: 300px;
+  color: black;
+}
+blockquote {
+  padding: 10%;
+  quotes: "\201C""\201D""\2018""\2019";
+  font-size: 15px;
+}
+blockquote:before {
+  color: #33CC9A;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0;
+  vertical-align: -0.4em;
+}
+blockquote:after {
+  visibility: hidden;
+  content: close-quote;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+  cursor: pointer;
+  color: white !important;
+}
+p{
+  margin-bottom: 7% !important;
+}
+
+/* Style the list */
+ul.breadcrumb {
+  padding: 1.5% 2%;
+  list-style: none;
+  /* background-color: #eee; */
+  background-color: transparent;
+  width: 100%;
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Sign Up</title>
+  <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="../styles/signup.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <link rel="stylesheet"
+    href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+    integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+  </head>
+
+
+<body class="container-fluid" style="padding: 0; overflow-x: hidden;">
+
+   
+ <!--Navbar-->
+ <nav class="navbar navbar-expand-lg navbar-dark primary-color"
+ style="background-color: #1B7BBA;width: 100%; position: fixed; padding: 1% 10%; top: 0;">
+ 
+     <!-- Navbar brand -->
+     <a class="navbar-brand" href="index.html" style="width: 13%; padding: 0;">
+       <img src="../assets/images/logo.png" width="70%" height="100%">
+     </a>
+ 
+     <!-- Collapse button -->
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+       aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+ 
+     <!-- Collapsible content -->
+     <div class="collapse navbar-collapse" id="basicExampleNav">
+ 
+       <!-- Links -->
+       <ul class="navbar-nav ml-auto">
+         <li class="nav-item dropdown">
+           <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+             aria-expanded="false">About</a>
+           <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+             <a class="dropdown-item" href="../views/aboutus.html">About Us</a>
+             <a class="dropdown-item" href="../views/reviews.html">Reviews</a>
+           </div>
+         </li>
+         <li class="nav-item dropdown">
+           <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+             aria-expanded="false">Treatments</a>
+           <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+             <a class="dropdown-item" href="../views/conditions.html">Conditions We Treat</a>
+             <a class="dropdown-item" href="../views/techniques.html">Techniques</a>
+           </div>
+         </li>
+ 
+         <li class="nav-item">
+           <a class="nav-link" href="../views/appointments.html">Appointment</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="../views/contact.html">Contact Us
+             <!-- <span class="sr-only">(current)</span> -->
+           </a>
+         </li>
+ 
+         <li class="nav-item" id="loginNav">
+           <a class="nav-link" data-toggle="modal" data-target="#modalLoginForm" href="">Log In</a>
+         </li>
+ 
+         <li class="nav-item" id="signupNav">
+           <a class="nav-link"  href="../views/signup.html"  style="color: hsla(0,0%,100%,.5) !important;">Sign Up</a>
+         </li>
+ 
+         <li class="nav-item dropdown" id="myAccountNav" style="display: none;">
+           <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+             aria-expanded="false">My Account</a>
+           <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+             <a class="dropdown-item" href="../views/patient-form.html">My Info</a>
+             <a class="dropdown-item" href="#">Log Out</a>
+           </div>
+         </li>
+ 
+       </ul>
+       <!-- Links -->
+ 
+       <form class="form-inline">
+         <div class="md-form my-0">
+           <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"> -->
+ 
+           <!-- <script>
+               (function() {
+                 var cx = '015812204710777810795:e64yqemmsc0';
+                 var gcse = document.createElement('script');
+                 gcse.type = 'text/javascript';
+                 gcse.async = true;
+                 gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                 var s = document.getElementsByTagName('script')[0];
+                 s.parentNode.insertBefore(gcse, s);
+               })();
+             </script>
+             <gcse:search enableAutoComplete="true"></gcse:search> -->
+ 
+         </div>
+       </form>
+     </div>
+     <!-- Collapsible content -->
+ 
+   </nav>
+   <!--/.Navbar-->
+
+    <div class="row col-lg-12" id="signUpContainer" style="margin: 0 !important;">
+
+        <!--Sign Up-->
+  <div  class="container-fluid" style="padding: 7%; background-color: #fafafa; padding-top: 12%;">
+
+    <div class="row">
+
+      <div id="leftSection" class="col-md-6 col-sm-12">
+        <div class="layer">
+        </div>
+        <!-- <h1 class="title">ARE YOU IN PAIN?</h1>
+        <p class="text">
+          If “Yes”, join us to get a free consultation with our qualified Physical Therapists.
+        </p> -->
+      </div>
+
+      <div class="col-md-6 col-sm-12" style="padding: 0;">
+        <!-- Material form register -->
+        <div class="card" style="padding: 7% 0;">
+
+          <h5 class="card-header info-color white-text text-center py-4">
+            <strong style="color:#33CC9A;">SIGN UP</strong>
+          </h5>
+
+          <!--Card content-->
+          <div class="card-body px-lg-5 pt-0">
+
+            <!-- Form -->
+            <!-- <form text-center" style="color: #757575;"> -->
+
+              <div>
+                <div class="row">
+                  <div class="col-md-6 col-sm-12">
+                    <!-- First name -->
+                    <div class="md-form">
+                      <input name="firstname" type="text" id="firstName" class="form-control" placeholder="First Name *" required />
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-12">
+                    <!-- Last name -->
+                    <div class="md-form">
+                      <input name="lastname" type="text" id="lastName" class="form-control" placeholder="Last Name *" required />
+                    </div>
+                  </div>
+                </div>
+
+              <div class="row" >
+                <div class="col-md-6 col-sm-12">
+                  <!-- First name -->
+                  <div class="md-form">
+                    <input name="email" type="email" id="email" class="form-control" placeholder="Email *" required />
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <!-- Last name -->
+                  <div class="md-form">
+                    <input name="password" type="password" id="passwordSignUp" class="form-control" placeholder="Password *" required />
+                    <span toggle="#passwordSignUp" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                  </div>
+                </div>
+              </div>
+
+              </div>
+  
+
+
+              <div class="form-row" id="error" style="display: none;">
+                
+                <div class="alert alert-danger" role="alert" >
+                   Email already Registered.
+                  </div>
+              
+                </div>
+
+                <div class="form-row" id="errorFields" style="display: none;">
+                
+                    <div class="alert alert-danger" role="alert" >
+                      Please fill all fields.
+                      </div>
+                  
+                    </div>
+
+          
+              
+         
+       
+
+              <div class="form-row" style="margin-top: 0 !important; margin-bottom: 0 !important;">
+                <div class="col">
+                  <!-- Sign up button -->
+                  <button id="signUpBtn"
+                    class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0 col-md-5 col-sm-12"
+                    type="submit">Sign Up</button>
+                </div>
+              </div>
+
+              <div class="form-row" style="margin-top: 0 !important; margin-bottom: 0 !important;">
+                <div class="col text-center">
+                    <p class="text">Already have an account ? <a href="">Login</a></p>
+                </div>
+              </div>
+
+            <!-- </form> -->
+            <!-- Form -->
+
+          </div>
+          <!-- Material form register -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!--Sign Up-->
+
+    </div>
+
+
+      
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+      integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+      integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous">
+    </script>
+    <script src="../scripts/signup.js"></script>
+</body>
+
+</html>

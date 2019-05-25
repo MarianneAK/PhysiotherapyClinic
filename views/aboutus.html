@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>About Us</title>
+  <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="../styles/about.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <link rel="stylesheet"
+    href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+    integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+
+<body class="container-fluid" style="padding: 0; overflow-x: hidden;">
+
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark primary-color"
+style="background-color: #1B7BBA;width: 100%; position: fixed; padding: 1% 10%;">
+
+<!-- Navbar brand -->
+<a class="navbar-brand" href="index.html" style="width: 13%; padding: 0;">
+  <img src="../assets/images/logo.png" width="70%" height="100%">
+</a>
+
+<!-- Collapse button -->
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+  aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+<!-- Collapsible content -->
+<div class="collapse navbar-collapse" id="basicExampleNav">
+
+  <!-- Links -->
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false" style="color: hsla(0,0%,100%,.5) !important;">About</a>
+      <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item" href="../views/aboutus.html">About Us</a>
+        <a class="dropdown-item" href="../views/reviews.html">Reviews</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false">Treatments</a>
+      <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item" href="../views/conditions.html">Conditions We Treat</a>
+        <a class="dropdown-item" href="../views/techniques.html">Techniques</a>
+      </div>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="../views/appointments.html">Appointment</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../views/contact.html">Contact Us
+        <!-- <span class="sr-only">(current)</span> -->
+      </a>
+    </li>
+
+    <li class="nav-item" id="loginNav">
+      <a class="nav-link" data-toggle="modal" data-target="#modalLoginForm" href="">Log In</a>
+    </li>
+
+    <li class="nav-item" id="signupNav">
+      <a class="nav-link"  href="../views/signup.html">Sign Up</a>
+    </li>
+
+    <li class="nav-item dropdown" id="myAccountNav" style="display: none;">
+      <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false">My Account</a>
+      <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item" href="../views/patient-form.html">My Info</a>
+        <a class="dropdown-item" href="#">Log Out</a>
+      </div>
+    </li>
+
+  </ul>
+  <!-- Links -->
+
+  <form class="form-inline">
+    <div class="md-form my-0">
+      <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"> -->
+
+      <!-- <script>
+          (function() {
+            var cx = '015812204710777810795:e64yqemmsc0';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+          })();
+        </script>
+        <gcse:search enableAutoComplete="true"></gcse:search> -->
+
+    </div>
+  </form>
+</div>
+<!-- Collapsible content -->
+
+</nav>
+<!--/.Navbar-->
+
+
+
+
+  <div id="parallalaxContainer" style="padding-top: 5%; background-color: white; z-index: 0;">
+    <!-- <div  class="row col-lg-12" style="padding: 0;">
+      <ul class="breadcrumb">
+        <li>About</li>
+        <li><a href="../views/aboutus.html">About Us</a></li>
+      </ul>
+    </div> -->
+    <div class="row col-lg-12" id="section1">
+
+      <div class="col-md-1"></div>
+      <div class="col-md-5" style="margin-right: 7%; margin-top: 3%;">
+        <img src="../assets/images/about-background-1.jpeg" id="section1Img">
+      </div>
+     
+      <div class="col-md-4" style="margin-top: 3%;">
+        <h3 class="title">Live Free is for Everyone !</h3>
+        <p class="text" style="font-size: 18px;">
+            At Live Free clinic we want our patients to live their best lives. That’s why we incorporate traditional physical therapy methods with the latest cutting-edge treatment. It is our goal to have you FEEL better so you can LIVE better. Whether you’re a sports enthusiast, construction worker, business person, teacher, busy parent, or retired senior citizen, we have a program to fit your lifestyle. 
+        </p>
+      </div>
+      <div class="col-md-2"></div>
+          <!-- <section>
+            <div class="image" data-type="background" data-speed="2"></div>
+            <div class="stuff" data-type="content"><h1>Simple Parallax scroll</h1><h2>Reoptimized</h2></div>
+          </section> -->
+    </div>
+  
+  
+    <section>
+      <div class="image" data-type="background" data-speed="7"></div>
+      <div class="stuff" data-type="content">
+        <h2>GET YOUR FITNESS BACK</h2>
+        <p style="margin-bottom: 2% !important; margin-top: 1%;">Functional rehabilitation tailored to your needs.</p>
+
+        <div>
+            <button id="contactUsBtn" class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0 col-md-2 col-sm-12" >CONTACT US</button>
+        </div> 
+      </div>
+  
+    
+    </section>
+  
+    <section style="height: 900px;">
+      <div class="image" data-type="background" data-speed="8"></div>
+      <div class="sectionText col-md-4 col-sm-12" data-type="content" style="text-align: left; margin-left: 5% !important; margin-top: 7%;  margin-bottom: 5%; top: 0 !important; ">
+          <h3 class="title" style="color: white !important; ">WHY CHOOSE US</h3>
+          <p class="text" style="color: #a3a8ae; font-size: 18px;">
+              In addition to our great location in Baabdat, we strive to push beyond the foundations of traditional physical therapy in order to adequately prepare you for return to activity. <br>At Live Free, we bridge the gap between traditional physical therapy and true readiness for return to a fit life, all in a great peaceful location with serene surroundings.
+          </p>
+      </div>
+    </section>
+<!--   
+    <section>
+      <div class="image" data-type="background" data-speed="5"></div>
+      <div class="stuff" data-type="content">
+      </div>
+    </section>
+  
+    <section>
+      <div class="image" data-type="background" data-speed="3"></div>
+      <div class="stuff" data-type="content">Accusamus at ex amet perferendis atque fuga, ad earum, ipsa perspiciatis, dolore neque, accusantium consectetur quis voluptatibus culpa architecto animi natus facere expedita sed. Voluptatem odit explicabo amet neque aut.</div>
+    </section>
+  
+    <section>
+      <div class="image" data-type="background" data-speed="3"></div>
+      <div class="stuff" data-type="content">Accusamus at ex amet perferendis atque fuga, ad earum, ipsa perspiciatis, dolore neque, accusantium consectetur quis voluptatibus culpa architecto animi natus facere expedita sed. Voluptatem odit explicabo amet neque aut.</div>
+    </section> -->
+
+    <div class="row col-lg-12" id="quoteSection">
+
+        <div class="col-md-2"></div>
+  
+       
+        <div class="col-md-8">  
+              <blockquote>
+                  <p style="display:inline; font-size: 24px; color: #495057;">
+                      <i>"Achieving normal mobility once again! I can perform my daily tasks without limitations and it’s only been 6 weeks!"</i> &nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;Sarah 
+                  </p>
+                </blockquote>
+                
+        </div>
+        <div class="col-md-2"></div>
+
+      </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="page-footer font-small blue-grey lighten-5" style="padding-top: 5%; background-color: white;">
+
+    <div style="background-color: #33CC9A;">
+      <div class="container">
+
+        <!-- Grid row-->
+        <div class="row py-4 d-flex align-items-center">
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+            <h6 class="mb-0">Get connected with us on social networks!</h6>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-7 text-center text-md-right" id="socialMediaContainer">
+
+            <!-- Facebook -->
+            <a class="fb-ic">
+              <i class="fab fa-facebook-f white-text mr-4"> </i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic">
+              <i class="fab fa-twitter white-text mr-4"> </i>
+            </a>
+            <!-- Google +-->
+            <a class="gplus-ic">
+              <i class="fab fa-google-plus-g white-text mr-4"> </i>
+            </a>
+            <!--Linkedin -->
+            <a class="li-ic">
+              <i class="fab fa-linkedin-in white-text mr-4"> </i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic">
+              <i class="fab fa-instagram white-text"> </i>
+            </a>
+
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row-->
+
+      </div>
+    </div>
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left mt-5">
+
+      <!-- Grid row -->
+      <div class="row mt-3 dark-grey-text">
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+
+          <!-- Content -->
+          <h6 class="text-uppercase font-weight-bold">Live Free Physical Therapy</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            Discover the solution to easy living and <a href="../views/signup.html">join us</a> now.
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">LINKS</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <a class="dark-grey-text" href="../views/aboutus.html">About Us</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="../views/reviews.html">Reviews</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="../views/conditions.html">Conditions</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="../views/techniques.html">Techniques</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="../views/appointments.html">Appointment</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="../views/contact.html">Contact Us</a>
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+          <!-- Links -->
+          <!-- <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <a class="dark-grey-text" href="#!">Your Account</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="#!">Become an Affiliate</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="#!">Shipping Rates</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="#!">Help</a>
+          </p> -->
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">Contact</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <i class="fas fa-home mr-3"></i> Baabdat, Principal Road</p>
+          <p>
+            <i class="fas fa-envelope mr-3"></i> livefreeclinic@gmail.com</p>
+          <p>
+            <i class="fas fa-phone mr-3"></i> + 961 04 234 567 </p>
+          <p>
+            <i class="fas fa-print mr-3"></i> + 961 04 234 567</p>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center text-black-50 py-3">© 2019 Copyright:
+      <a class="dark-grey-text" href=""> Marianne Abi Kanaan</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+
+
+  
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+      integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+      integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous">
+    </script>
+    <script src="../scripts/about.js"></script>
+</body>
+
+</html>

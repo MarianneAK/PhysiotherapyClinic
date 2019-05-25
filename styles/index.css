@@ -1,17 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
+
+
+.text{
+    word-spacing: 2px;
+    font-family: Lato; 
+    font-size: 20px; 
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+    line-height: 40px; 
+    color: #495057;
+}
+
+.title{
+    font-family: "Open Sans" !important;
+    color: #1B7BBA !important;
+}
+/* Add some content at the bottom of the video/page */
+.content {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+  }
+  
+  /* Style the button used to pause/play the video */
+  #videoBtn {
+    width: 50%;
+    font-size: 3vmin;
+    padding: 2%;
+    border: none;
+    background-color: #33CC9A;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 1%;
+  }
+  
+  #videoBtn:hover {
+    background-color: #FFF;
+    color: #33CC9A;
+    border: none;
+  }
 
 .form-row{
-    margin-bottom: 3%;
+    margin: 3%;
 }
 
 #signUpBtn{
     margin: auto;
-    background-color: #21d192;
+    background-color: #33CC9A;
     color: white;
 }
 
 #signUpBtn:hover{
-    background-color: #1eaa79;
+    background-color: #FFF;
+    color: #33CC9A;
+}
+
+#loginBtn{
+    margin: auto;
+    background-color: #33CC9A;
+    color: white;
+}
+
+#loginBtn:hover{
+    background-color: #FFF;
+    color: #33CC9A;
+}
+
+#bookBtn{
+    margin: auto;
+    background-color: #33CC9A;
+    color: white;
+}
+
+#bookBtn:hover{
+    background-color: #FFF;
+    color: #33CC9A;
 }
 
 #treatmentsContainer{
@@ -25,99 +96,6 @@
 
 #teamContainer{
     padding: 5% 0;
-}
-
-#humanBody{
-    background: url(../assets/human-body.png) no-repeat;
-    height: 800px;
-    background-size: contain;
-}
-
-#bodyPart1{
-    display: block;
-    position: relative;
-    width: 95px;
-    height: 90px;
-    left: 154px;
-    top: 8px;
-    border-radius: 100%;
-    overflow: hidden;
-    background-color: #5d82d1;
-}
-
-#bodyPart2{
-    display: block;
-    position: relative;
-    border-radius: 100%;
-    height: 160px;
-    left: 166px;
-    top: 97px;
-    width: 72px;
-    overflow: hidden;
-    background-color: #5d82d1;
-}
-
-#bodyPart3{
-    display: block;
-    position: relative;
-    height: 72px;
-    left: 228px;
-    top: 461px;
-    width: 75px;
-    border-radius: 100%;
-    overflow: hidden;
-    background-color: #5d82d1;
-}
-
-#bodyPart4{
-    display: block;
-    position: relative;
-    height: 73px;
-    left: 278px;
-    top: -215px;
-    width: 74px;
-    border-radius: 100%;
-    overflow: hidden;
-    background-color: #5d82d1;
-}
-
-#bodyPart5{
-    display: block;
-    position: relative;
-    border-radius: 50px;
-    height: 187px;
-    left: 310px;
-    top: -154px;
-    width: 80px;
-    -webkit-transform: skewX(18deg);
-    -ms-transform: skewX(18deg);
-    -o-transform: skewX(18deg);
-    transform: skewX(18deg);
-    background-color: #5d82d1;
-}
-
-#bodyPart6{
-    display: block;
-    position: relative;
-    height: 72px;
-    left: 241px;
-    top: -254px;
-    width: 77px;
-    border-radius: 100%;
-    overflow: hidden;
-    background-color: #5d82d1;
-}
-
-#bodyPart7{
-    display: block;
-    position: relative;
-    height: 74px;
-    left: 222px;
-    top: -123px;
-    width: 80px;
-    border-radius: 100%;
-    overflow: hidden;
-    background-color: #5d82d1;
 }
 
 .cardIcon{
@@ -138,6 +116,8 @@
     border: 1px solid #f1f1f1;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
     margin: auto;
+    margin-top: 2%;
+    cursor: pointer;
   }
   
   /* This container is needed to position the front and back side */
@@ -171,12 +151,26 @@
   
   /* Style the back side */
   .flip-card-back {
-    background-color: white;
-    color: black;
+      padding: 5%;
+      text-align: center;
+      justify-content: center;
+    background-color: transparent;
+    color: white;
     transform: rotateY(180deg);
+    font-family: Lato; 
+    font-size: 16px; 
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+    line-height: 34.2px; 
+   
   }
 
-
+.flip-card-back p{
+    margin-top: 5% !important;
+    overflow: hidden;
+    max-height: 62%;
+}
   
   .our-team{
       overflow: hidden;
@@ -265,5 +259,175 @@
       position: absolute;
       transition: opacity 0.3s ease 0s;
   }
+
+  .form-control{
+    background-image: linear-gradient(0deg,#00CC99 2px,rgba(0,150,136,0) 0),linear-gradient(0deg,rgba(0,0,0,.26) 1px,transparent 0) !important;
+  }
   
   
+  
+.bodyPart{
+    cursor: pointer;
+}
+
+#bodyPart1{
+    display: block;
+    position: relative;
+    width: 95px;
+    height: 90px;
+    left: 202px;
+    top: 5px;
+    border-radius: 100%;
+    overflow: hidden;
+    /*background-color: #5d82d1;*/
+}
+
+#bodyPart2{
+    display: block;
+    position: relative;
+    border-radius: 100%;
+    height: 160px;
+    left: 212px;
+    top: 66px;
+    width: 75px;
+    overflow: hidden;
+    /*background-color: #5d82d1;*/
+}
+
+#bodyPart3{
+    display: block;
+    position: relative;
+    height: 72px;
+    left: 267px;
+    top: 367px;
+    width: 75px;
+    border-radius: 100%;
+    overflow: hidden;
+    /*background-color: #5d82d1;*/
+}
+
+#bodyPart4{
+    display: block;
+    position: relative;
+    height: 73px;
+    left: 308px;
+    top: -232px;
+    width: 74px;
+    border-radius: 100%;
+    overflow: hidden;
+    /*background-color: #5d82d1;*/
+}
+
+#bodyPart5{
+    display: block;
+    position: relative;
+    border-radius: 50px;
+    height: 187px;
+    left: 343px;
+    top: -188px;
+    width: 80px;
+    -webkit-transform: skewX(18deg);
+    -ms-transform: skewX(18deg);
+    -o-transform: skewX(18deg);
+    transform: skewX(18deg);
+    overflow: hidden;
+    /*background-color: #5d82d1;*/
+}
+
+#bodyPart6{
+    display: block;
+    position: relative;
+    height: 72px;
+    left: 271px;
+    top: -298px;
+    width: 77px;
+    border-radius: 100%;
+    overflow: hidden;
+    /*background-color: #5d82d1;*/
+}
+
+#bodyPart7{
+    display: block;
+    position: relative;
+    height: 74px;
+    left: 257px;
+    top: -195px;
+    width: 80px;
+    border-radius: 100%;
+    overflow: hidden;
+    /*background-color: #5d82d1;*/
+}
+
+#humanBody{
+    background: url(../assets/images/human-body.png) no-repeat center center;
+    height: 700px;
+    background-size: contain;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+    cursor: pointer;
+    color: white !important;
+    font-size: inherit;
+}
+
+#socialMediaContainer a{
+    cursor: pointer;
+}
+
+.field-icon {
+    float: right;
+    margin-left: -25px;
+    margin-top: -25px;
+    position: relative;
+    /* z-index: 2; */
+  }
+
+  #loginError{
+      display: none;
+  }
+
+  
+  .custom-file-control:read-only, .form-control:read-only{
+    background-image: linear-gradient(0deg,#009688 2px,rgba(0,150,136,0) 0),linear-gradient(0deg,rgba(0,0,0,.26) 1px,transparent 0) !important;
+  }
+  
+.custom-file-control:disabled, .form-control:disabled, .form-control[readonly], [readonly].custom-file-control{
+    background-color: inherit !important;
+  }
+
+  .gj-icon, .inputIcons{
+    color: #009688;
+}
+
+.gj-picker-md [role=header], .gj-picker-md [role=body] [role=arrow], .gj-picker .arrow-begin {
+  background: #009688 !important;
+}
+
+.gj-picker-md [role=footer] button.gj-button-md{
+  color: #009688 !important;
+}
+.gj-picker-md .arrow-end{
+  border-color: #009688 !important;
+}
+
+.gsc-control-cse{
+    background-color: transparent !important;
+    border: 0 !important;
+    padding: 0 !important;
+}
+
+.gsc-search-button-v2, .gsc-search-button-v2:hover, .gsc-search-button-v2:focus{
+    border: 0 !important;
+    border-color: #2F5BB7 !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    filter: none !important;
+}
+
+.md-form{
+    padding: 3% 2%;
+}
+
+.form-control:invalid{
+    background-image: linear-gradient(0deg,#009688 2px,rgba(0,150,136,0) 0),linear-gradient(0deg,rgba(0,0,0,.26) 1px,transparent 0) !important;
+}

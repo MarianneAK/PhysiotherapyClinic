@@ -3,211 +3,580 @@
 <html>
 
 <head>
-    <title>Appointments</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="../styles/appointments.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
-    <link rel="stylesheet"
-        href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
-        integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
+  <title>Appointments</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="../styles/appointments.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <link rel="stylesheet"
+    href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+    integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
 
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.min.css">
-    <script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
-    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
-    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.min.css">
+  <script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
+  <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+  <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
 
 </head>
 
 
 <body class="container-fluid" style="padding: 0; overflow-x: hidden;">
 
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark primary-color"
+    style="background-color: #1B7BBA;width: 100%; position: fixed; padding: 1% 10%;">
 
-    <div class="container-fluid" style="padding: 10%;">
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="index.html" style="width: 13%; padding: 0;">
+      <img src="../assets/images/logo.png" width="70%" height="100%">
+    </a>
+
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+      aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+
+      <!-- Links -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">About</a>
+          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="../views/aboutus.html">About Us</a>
+            <a class="dropdown-item" href="../views/reviews.html">Reviews</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">Treatments</a>
+          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="../views/conditions.html">Conditions We Treat</a>
+            <a class="dropdown-item" href="../views/techniques.html">Techniques</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="../views/appointments.html"
+            style="color: hsla(0,0%,100%,.5) !important;">Appointment</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../views/contact.html">Contact Us
+            <!-- <span class="sr-only">(current)</span> -->
+          </a>
+        </li>
+
+        <li class="nav-item" id="loginNav">
+          <a class="nav-link" data-toggle="modal" data-target="#modalLoginForm" href="">Log In</a>
+        </li>
+
+        <li class="nav-item" id="signupNav">
+          <a class="nav-link" href="../views/signup.html">Sign Up</a>
+        </li>
+
+        <li class="nav-item dropdown" id="myAccountNav" style="display: none;">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">My Account</a>
+          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="../views/patient-form.html">My Info</a>
+            <a class="dropdown-item" href="#">Log Out</a>
+          </div>
+        </li>
+
+      </ul>
+      <!-- Links -->
+
+      <form class="form-inline">
+        <div class="md-form my-0">
+          <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"> -->
+
+          <!-- <script>
+              (function() {
+                var cx = '015812204710777810795:e64yqemmsc0';
+                var gcse = document.createElement('script');
+                gcse.type = 'text/javascript';
+                gcse.async = true;
+                gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(gcse, s);
+              })();
+            </script>
+            <gcse:search enableAutoComplete="true"></gcse:search> -->
+
+        </div>
+      </form>
+    </div>
+    <!-- Collapsible content -->
+
+  </nav>
+  <!--/.Navbar-->
 
 
-        <div class="row col-lg-12">
-                <div class="col-md-7 col-sm-12" id="formContainer">
-                        <div class="row col-lg-12"  style="margin-bottom: 5%;">
-                            <div class="col-md-1"></div>
-                            <div class="col-md-5 col-sm-12">
-                                <input id="datepicker" class="form-control" />
-                            </div>
-            
-                            <div class="col-md-5 col-sm-12">
-                                <input id="timepicker" class="form-control" />
-                            </div>
-                            <div class="col-md-1"></div>
-                        </div>
+  <div class="container-fluid" style="padding: 10%;">
 
-                        <div class="row col-lg-12" id="error">
-                            <div class="col-md-12 col-sm-12 text-center">
-                                    <p>Unavailable. Please choose another date and time.</p>
-                            </div>
-                        </div>
-            
-            
-                        <div class="row col-lg-12" style="margin-bottom: 5%;">
-            
-                            <div class="col-md-1"></div>
-                            <div class="col-md-10">
-                                <select class="selectpicker form-control" multiple data-live-search="true"s>
-                                    <option>Mustard</option>
-                                    <option>Ketchup</option>
-                                    <option>Relish</option>
-                                    <option>Mustard</option>
-                                    <option>Ketchup</option>
-                                    <option>Relish</option>
-                                  </select>
-                            </div>
-                            <div class="col-md-1"></div>
-                  
-                        </div>
-            
-                        <div class="row col-lg-12"  style="margin-bottom: 5%;">
-                            <div class="col-md-1"></div>
-                            <div class="col-md-10 col-sm-12">
-                                <!--Textarea with icon prefix-->
-                                <div>
-                                    <i class="fas fa-pencil-alt prefix inputIcons" ></i>
-                                    <textarea id="form22" class="md-textarea form-control" rows="3" placeholder="ADDITIONNAL COMMENTS"></textarea>
-                                </div>
-                            </div>
-                            <div class="col-md-1"></div>
-                        </div>
-            
-                        <div class="row col-lg-12" id="carouselContainer">
-                            <div class="carousel-wrapper">
-                                <div class="carousel" data-flickity>
-            
-                                    <div class="carousel-cell">
-            
-                                        <p class="name">CHRISTY ABI KANAAN</p>
-                                        <img src="../assets/images/employee2.jpg" class="carousel-thumbnail" />
-                                        <!-- <p>Christy Abi Kanaan</p> -->
-                                        <div>
-                                            <p class="name" style="float: left;">PHYSICAL THERAPIST</p>
-                                            <img src="../assets/icons/thumbs-up.svg" class="carousel-like not-liked">
-                                        </div>
-            
-            
-                                    </div>
-                                    <div class="carousel-cell">
-            
-                                        <p class="name">CHRISTY ABI KANAAN</p>
-                                        <img src="../assets/images/employee2.jpg" class="carousel-thumbnail" />
-                                        <!-- <p>Christy Abi Kanaan</p> -->
-                                        <div>
-                                            <p class="name" style="float: left;">PHYSICAL THERAPIST</p>
-                                            <img src="../assets/icons/thumbs-up.svg" class="carousel-like not-liked">
-                                        </div>
-            
-            
-                                    </div>
-                                    <div class="carousel-cell">
-            
-                                        <p class="name">CHRISTY ABI KANAAN</p>
-                                        <img src="../assets/images/employee2.jpg" class="carousel-thumbnail" />
-                                        <!-- <p>Christy Abi Kanaan</p> -->
-                                        <div>
-                                            <p class="name" style="float: left;">PHYSICAL THERAPIST</p>
-                                            <img src="../assets/icons/thumbs-up.svg" class="carousel-like not-liked">
-                                        </div>
-            
-            
-                                    </div>
-            
-                                    <div class="carousel-cell">
-            
-                                        <p class="name">CHRISTY ABI KANAAN</p>
-                                        <img src="../assets/images/employee2.jpg" class="carousel-thumbnail" />
-                                        <!-- <p>Christy Abi Kanaan</p> -->
-                                        <div>
-                                            <p class="name" style="float: left;">PHYSICAL THERAPIST</p>
-                                            <img src="../assets/icons/thumbs-up.svg" class="carousel-like not-liked">
-                                        </div>
-            
-            
-                                    </div>
-            
-                                    <div class="carousel-cell">
-            
-                                        <p class="name">CHRISTY ABI KANAAN</p>
-                                        <img src="../assets/images/employee2.jpg" class="carousel-thumbnail" />
-                                        <!-- <p>Christy Abi Kanaan</p> -->
-                                        <div>
-                                            <p class="name" style="float: left;">PHYSICAL THERAPIST</p>
-                                            <img src="../assets/icons/thumbs-up.svg" class="carousel-like not-liked">
-                                        </div>
-            
-            
-                                    </div>
-                                    <div class="carousel-cell">
-            
-                                        <p class="name">CHRISTY ABI KANAAN</p>
-                                        <img src="../assets/images/employee2.jpg" class="carousel-thumbnail" />
-                                        <!-- <p>Christy Abi Kanaan</p> -->
-                                        <div>
-                                            <p class="name" style="float: left;">PHYSICAL THERAPIST</p>
-                                            <img src="../assets/icons/thumbs-up.svg" class="carousel-like not-liked">
-                                        </div>
-                                        <!-- <div class="line"></div>
+
+
+    <div class="row col-lg-12" id="landingPageSuccess" style="display: none;  margin-top: 5%;">
+      <div class="col-md-12 col-sm-12 text-center">
+
+        <div class="alert alert-success" role="alert">
+          Appointment successfully saved. You will recieve a confirmation mail.<br>
+          You may fill the rest of this form if you like.
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row col-lg-12" style="margin-top: 5%; z-index: 0;">
+      <div class="col-md-7 col-sm-12" id="formContainer" style="margin-bottom: 7%;">
+
+        <form>
+
+          <!-- 
+                    <div class="row col-lg-12" style="margin-bottom: 5%;">
+                        <div class="col-md-1"></div>
+                        <p class="myText col-md-10 col-sm-12" style="font-size: 18px; margin:0; color: #009966;">Choose
+                            your preffered date & time.</p>
+                        <div class="col-md-1"></div>
+                    </div> -->
+
+          <div class="row col-lg-12" style="margin-bottom: 5%;">
+            <div class="col-md-1"></div>
+            <div class="col-md-5 col-sm-12">
+              <input id="datepicker" class="form-control" required readonly />
+            </div>
+
+            <div class="col-md-5 col-sm-12">
+              <input id="timepicker" class="form-control" required readonly />
+            </div>
+
+            <div class="col-md-1 col-sm-1" style="max-width: 50px;">
+              <div class="tooltipCustom">
+                <img id="available" src="../assets/icons/available.svg" style="cursor: pointer;" width="100%"
+                  height="50%" />
+                <span class="tooltiptext">Closest available appointment</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row col-lg-12" id="error">
+            <div class="col-md-12 col-sm-12 text-center">
+              <!-- <p>Unavailable. Please choose another date and time.</p> -->
+
+              <div class="alert alert-danger" role="alert">
+                Unavailable. Please choose another date and time.
+              </div>
+
+            </div>
+          </div>
+
+          <!-- 
+                    <div class="row col-lg-12" style="margin-bottom: 5%;">
+                        <div class="col-md-1"></div>
+                        <p class="myText col-md-10 col-sm-12" style="font-size: 18px; margin:0;color: #009966;">Fill the
+                            reason for your visit.</p>
+                        <div class="col-md-1"></div>
+                    </div> -->
+
+          <div class="row col-lg-12" style="margin-bottom: 5%;">
+
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+              <select class="selectpicker form-control" multiple data-live-search="true"
+                title="VISIT REASONS (OPTIONAL)">
+                <option>Limitation of joint movement</option>
+                <option>Pain in the limbs</option>
+                <option>Pain in back/neck/lumber</option>
+                <option>Regular check-up</option>
+                <option>Massage</option>
+                <option>Post-trauma</option>
+                <option>Post-operation</option>
+              </select>
+            </div>
+            <div class="col-md-1"></div>
+
+          </div>
+
+          <div class="row col-lg-12" style="margin-bottom: 5%;">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 col-sm-12">
+              <!--Textarea with icon prefix-->
+              <div>
+                <i class="fas fa-pencil-alt prefix inputIcons"></i>
+                <textarea id="form22" class="md-textarea form-control" rows="3"
+                  placeholder="OPTIONAL COMMENTS"></textarea>
+              </div>
+            </div>
+            <div class="col-md-1"></div>
+          </div>
+
+
+
+          <div class="row col-lg-12" id="carouselContainer" style="margin-top: 10%;">
+
+            <div class="row col-lg-12" style="margin-bottom: 5%;">
+              <div class="col-md-1"></div>
+              <p class="myText col-md-10 col-sm-12" style="font-size: 18px; margin:0; color: #009966;">
+                "Like" your preferred therapists.
+              </p>
+              <div class="col-md-1"></div>
+            </div>
+
+            <div class="carousel-wrapper">
+              <div class="carousel" data-flickity>
+
+                <div class="carousel-cell">
+
+                  <p class="name">CHRISTY ABI KANAAN</p>
+                  <img src="../assets/images/employee2.jpg" class="carousel-thumbnail" alt="physical therapist" />
+                  <!-- <p>Christy Abi Kanaan</p> -->
+                  <div>
+                    <p class="name" style="float: left;">PHYSICAL THERAPIST</p>
+                    <img src="../assets/icons/thumbs-up.svg" class="carousel-like not-liked">
+                  </div>
+
+
+                </div>
+                <div class="carousel-cell">
+
+                  <p class="name">CHRISTY ABI KANAAN</p>
+                  <img src="../assets/images/employee3.jpg" class="carousel-thumbnail" alt="physical therapist" />
+                  <!-- <p>Christy Abi Kanaan</p> -->
+                  <div>
+                    <p class="name" style="float: left;">PHYSICAL THERAPIST</p>
+                    <img src="../assets/icons/thumbs-up.svg" class="carousel-like not-liked">
+                  </div>
+
+
+                </div>
+                <div class="carousel-cell">
+
+                  <p class="name">CHRISTY ABI KANAAN</p>
+                  <img src="../assets/images/employee4.jpg" class="carousel-thumbnail" alt="physical therapist" />
+                  <!-- <p>Christy Abi Kanaan</p> -->
+                  <div>
+                    <p class="name" style="float: left;">PHYSICAL THERAPIST</p>
+                    <img src="../assets/icons/thumbs-up.svg" class="carousel-like not-liked">
+                  </div>
+
+
+                </div>
+
+                <div class="carousel-cell">
+
+                  <p class="name">CHRISTY ABI KANAAN</p>
+                  <img src="../assets/images/employee5.jpg" class="carousel-thumbnail" alt="physical therapist" />
+                  <!-- <p>Christy Abi Kanaan</p> -->
+                  <div>
+                    <p class="name" style="float: left;">PHYSICAL THERAPIST</p>
+                    <img src="../assets/icons/thumbs-up.svg" class="carousel-like not-liked">
+                  </div>
+
+
+                </div>
+
+                <div class="carousel-cell">
+
+                  <p class="name">CHRISTY ABI KANAAN</p>
+                  <img src="../assets/images/employee1.jpg" class="carousel-thumbnail" alt="physical therapist" />
+                  <!-- <p>Christy Abi Kanaan</p> -->
+                  <div>
+                    <p class="name" style="float: left;">PHYSICAL THERAPIST</p>
+                    <img src="../assets/icons/thumbs-up.svg" class="carousel-like not-liked">
+                  </div>
+
+
+                </div>
+                <div class="carousel-cell">
+
+                  <p class="name">CHRISTY ABI KANAAN</p>
+                  <img src="../assets/images/employee6.jpg" class="carousel-thumbnail" alt="physical therapist" />
+                  <!-- <p>Christy Abi Kanaan</p> -->
+                  <div>
+                    <p class="name" style="float: left;">PHYSICAL THERAPIST</p>
+                    <img src="../assets/icons/thumbs-up.svg" class="carousel-like not-liked">
+                  </div>
+                  <!-- <div class="line"></div>
                                                                     <div class="price">
                                                                       <span>225<sup>€</sup></span>
                                                                     </div> -->
-            
-            
-                                    </div>
-            
-                                </div>
-                            </div>
-            
-                        </div>
-            
-                        <div class="row col-lg-12">
-                                <!-- Sign up button -->
-                                <button id="appointmentBtn"
-                                  class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0 col-md-4 col-sm-12"
-                                  type="submit">TAKE APPOINTMENT</button>
-                        </div>
-                    </div>
 
-                    <div class="col-md-1">
-                        
-                    </div>
 
-                    <div class="col-md-4 col-sm-12">
-                            <div id="rightSection">
-                                    <header><h5>BUSINESS HOURS</h5></header>
-
-                                    <p class="hourText">Mon: 7:00 am - 5:00 pm</p>
-                                    <p class="hourText">Tue: 7:00 am - Noon</p>
-                                    <p class="hourText">Wed: 7:00 am - 5:00 pm</p>
-                                    <p class="hourText">Thur: 7:00 am - 5:00 pm</p>
-                                    <p class="hourText">Fri: 7:00 am - 5:00 pm</p>
-                
-                            </div>
                 </div>
-            
+
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row col-lg-12" style="margin-top: 10%;">
+            <!-- Sign up button -->
+            <button id="appointmentBtn"
+              class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0 col-md-5 col-sm-12"
+              type="submit">TAKE APPOINTMENT</button>
+          </div>
+
+          <div class="row col-lg-12" id="success">
+            <div class="col-md-12 col-sm-12 text-center">
+
+              <div class="alert alert-success" role="alert">
+                Appointment successfully saved. You will receive a confirmation mail.
+              </div>
+
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+      <div class="col-md-1">
+
+      </div>
+
+      <div class="col-md-4 col-sm-12">
+        <div id="rightSection">
+          <header>
+            <h5>BUSINESS HOURS</h5>
+          </header>
+
+          <p class="hourText">Mon: 7:00 am - 5:00 pm</p>
+          <p class="hourText">Tue: 7:00 am - Noon</p>
+          <p class="hourText">Wed: 7:00 am - 5:00 pm</p>
+          <p class="hourText">Thur: 7:00 am - 5:00 pm</p>
+          <p class="hourText">Fri: 7:00 am - 5:00 pm</p>
+
         </div>
-    
-     
+      </div>
+
+    </div>
+    <!-- Login Modal -->
+
+
+    <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header text-center" style="background-color: #33CC9A;">
+            <h4 class="modal-title w-100" style="color: white;">LOG IN</h4>
+            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button> -->
+          </div>
+          <div class="modal-body mx-3">
+            <div class="md-form mb-5" style=" margin-bottom: 1rem!important;">
+              <i class="fas fa-envelope prefix grey-text"></i>
+              <input type="email" id="loginEmail" class="form-control validate" placeholder="Email">
+              <!-- <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label> -->
+            </div>
+
+            <div class="md-form mb-4">
+              <i class="fas fa-lock prefix grey-text"></i>
+              <input type="password" id="loginPass" class="form-control validate" placeholder="Password">
+              <span toggle="#loginPass" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+              <!-- <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label> -->
+            </div>
+
+
+            <p>Don't have an account ? <a href="signup.html">Sign Up</a></p>
+            <div id="loginError">
+              <div class="alert alert-danger" role="alert">
+                Wrong email or password. Please try again.
+              </div>
+            </div>
+
+          </div>
+
+          <div class="modal-footer d-flex justify-content-center">
+            <button id="loginBtn"
+              class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0 col-md-4 col-sm-12">Login</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 
+<div class="text-center">
+  <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalLoginForm">Launch
+    Modal Login Form</a>
+</div> -->
+
+    <!-- Login Modal -->
+
+
+
+  </div>
+
+
+
+  <!-- Footer -->
+  <footer class="page-footer font-small blue-grey lighten-5">
+
+    <div style="background-color: #33CC9A;">
+      <div class="container">
+
+        <!-- Grid row-->
+        <div class="row py-4 d-flex align-items-center">
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+            <h6 class="mb-0">Get connected with us on social networks!</h6>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-7 text-center text-md-right" id="socialMediaContainer">
+
+            <!-- Facebook -->
+            <a class="fb-ic">
+              <i class="fab fa-facebook-f white-text mr-4"> </i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic">
+              <i class="fab fa-twitter white-text mr-4"> </i>
+            </a>
+            <!-- Google +-->
+            <a class="gplus-ic">
+              <i class="fab fa-google-plus-g white-text mr-4"> </i>
+            </a>
+            <!--Linkedin -->
+            <a class="li-ic">
+              <i class="fab fa-linkedin-in white-text mr-4"> </i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic">
+              <i class="fab fa-instagram white-text"> </i>
+            </a>
+
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row-->
+
+      </div>
     </div>
 
-    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
-        integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous">
-    </script>
-    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
-        integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
-    <script src="../scripts/appointments.js"></script>
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left mt-5">
+
+      <!-- Grid row -->
+      <div class="row mt-3 dark-grey-text">
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+
+          <!-- Content -->
+          <h6 class="text-uppercase font-weight-bold">Live Free Physical Therapy</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            Discover the solution to easy living and <a href="../views/signup.html">join us</a> now.
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">LINKS</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <a class="dark-grey-text" href="../views/aboutus.html">About Us</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="../views/reviews.html">Reviews</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="../views/conditions.html">Conditions</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="../views/techniques.html">Techniques</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="../views/appointments.html">Appointment</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="../views/contact.html">Contact Us</a>
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+          <!-- Links -->
+          <!-- <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <a class="dark-grey-text" href="#!">Your Account</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="#!">Become an Affiliate</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="#!">Shipping Rates</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="#!">Help</a>
+          </p> -->
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">Contact</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <i class="fas fa-home mr-3"></i> Baabdat, Principal Road</p>
+          <p>
+            <i class="fas fa-envelope mr-3"></i> livefreeclinic@gmail.com</p>
+          <p>
+            <i class="fas fa-phone mr-3"></i> + 961 04 234 567 </p>
+          <p>
+            <i class="fas fa-print mr-3"></i> + 961 04 234 567</p>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center text-black-50 py-3">© 2019 Copyright:
+      <a class="dark-grey-text" href=""> Marianne Abi Kanaan</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+
+
+  <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+    integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous">
+  </script>
+  <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+    integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+  <script src="../scripts/appointments.js"></script>
 
 </body>
 

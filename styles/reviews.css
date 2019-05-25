@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body{
+    /* overflow-y: hidden; */
+}
+
+
+.text{
+    word-spacing: 1px;
+    font-family: Lato; 
+    font-size: 20px; 
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+    line-height: 34.2px; 
+    color: #495057;
+}
+
+.title{
+    font-family: "Open Sans" !important;
+    color: #1B7BBA !important;
+}
+
+
+.rating{
+    margin-top: 3%;
+    float: left;
+}
+
+  /* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+    follow these rules. Every browser that supports :checked also supports :not(), so
+    it doesn’t make the test unnecessarily selective */
+  .rating:not(:checked) > input {
+      position:absolute;
+      top:-9999px;
+      clip:rect(0,0,0,0);
+  }
+
+  .rating:not(:checked) > label {
+      float:right;
+      width:1em;
+      /* padding:0 .1em; */
+      overflow:hidden;
+      white-space:nowrap;
+      cursor:pointer;
+      font-size:300%;
+      /* line-height:1.2; */
+      color:#ddd;
+  }
+
+  .rating:not(:checked) > label:before {
+      content: '★ ';
+  }
+
+  .rating > input:checked ~ label {
+      color: #1B7BBA;
+      
+  }
+
+  .rating:not(:checked) > label:hover,
+  .rating:not(:checked) > label:hover ~ label {
+      color: #1B7BBA;
+      
+  }
+
+  .rating > input:checked + label:hover,
+  .rating > input:checked + label:hover ~ label,
+  .rating > input:checked ~ label:hover,
+  .rating > input:checked ~ label:hover ~ label,
+  .rating > label:hover ~ input:checked ~ label {
+      color: #1B7BBA;
+      
+  }
+
+  .rating > label:active {
+      position:relative;
+      top:2px;
+      left:2px;
+  }
+
+
+  .ratingStarFilled{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 1%;
+  }
+
+  .reviewText{
+    
+      font-family: Lato; 
+    font-size: 17px; 
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+    line-height: 27px; 
+    color: #495057;
+    word-spacing: 2px;
+  }
+
+  #reviewsContainer{
+      overflow-y: scroll;
+      max-height: 500px;
+  }
+
+  .fa-flag{
+    float: right;
+    color: red;
+    cursor: pointer;
+  }
+
+  #submitCommentBtn{
+    background-color: #33CC9A;
+    color: white;
+    float: right;
+    width: 100%;
+    margin-bottom: 5%;
+    border :1px solid #33CC9A;
+  }
+
+
+#submitCommentBtn:hover{
+    background-color: #FFF;
+    color: #33CC9A;
+}
+
+.field-icon {
+    float: right;
+    margin-left: -25px;
+    margin-top: -25px;
+    position: relative;
+    z-index: 2;
+  }
+
+  #loginError{
+      display: none;
+  }
+
+  .card{
+      margin-bottom: 1%;
+  }
+
+  .row{
+      margin-right: 0 !important;
+      margin-left: 0 !important;
+  }
+
+  .navbar-dark .navbar-nav .nav-link{
+    cursor: pointer;
+    color: white !important;
+}
+
+/* Style the list */
+ul.breadcrumb {
+    padding: 1% 2%;
+    list-style: none;
+    /* background-color: #eee; */
+    background-color: transparent;
+  }
+  
+  /* Display list items side by side */
+  ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+  }
+  
+  /* Add a slash symbol (/) before/behind each list item */
+  ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+  }
+  
+  /* Add a color to all links inside the list */
+  ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+  }
+  
+  /* Add a color on mouse-over */
+  ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+  }
+  .form-control:invalid{
+        background-image: linear-gradient(0deg,#009688 2px,rgba(0,150,136,0) 0),linear-gradient(0deg,rgba(0,0,0,.26) 1px,transparent 0) !important;
+  }

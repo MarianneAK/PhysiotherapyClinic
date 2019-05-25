@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Patient Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="../styles/patient-form.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link rel="stylesheet"
+        href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+        integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+
+<body class="container-fluid" style="padding: 0; overflow-x: hidden;">
+
+    <!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark primary-color"
+style="background-color: #1B7BBA;width: 100%; position: fixed; padding: 1% 10%;">
+
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="index.html" style="width: 13%; padding: 0;">
+      <img src="../assets/images/logo.png" width="70%" height="100%">
+    </a>
+
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+      aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+
+      <!-- Links -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">About</a>
+          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="../views/aboutus.html">About Us</a>
+            <a class="dropdown-item" href="../views/reviews.html">Reviews</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">Treatments</a>
+          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="../views/conditions.html">Conditions We Treat</a>
+            <a class="dropdown-item" href="../views/techniques.html">Techniques</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="../views/appointments.html">Appointment</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../views/contact.html">Contact Us
+            <!-- <span class="sr-only">(current)</span> -->
+          </a>
+        </li>
+<!-- 
+        <li class="nav-item" id="loginNav">
+          <a class="nav-link" data-toggle="modal" data-target="#modalLoginForm" href="">Log In</a>
+        </li>
+
+        <li class="nav-item" id="signupNav">
+          <a class="nav-link"  href="../views/signup.html">Sign Up</a>
+        </li> -->
+
+        <li class="nav-item dropdown" id="myAccountNav"  >
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false" style="color: hsla(0,0%,100%,.5) !important;">My Account</a>
+          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="../views/patient-form.html">My Info</a>
+            <a class="dropdown-item" href="#">Log Out</a>
+          </div>
+        </li>
+
+      </ul>
+      <!-- Links -->
+
+      <form class="form-inline">
+        <div class="md-form my-0">
+          <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"> -->
+
+          <!-- <script>
+              (function() {
+                var cx = '015812204710777810795:e64yqemmsc0';
+                var gcse = document.createElement('script');
+                gcse.type = 'text/javascript';
+                gcse.async = true;
+                gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(gcse, s);
+              })();
+            </script>
+            <gcse:search enableAutoComplete="true"></gcse:search> -->
+
+        </div>
+      </form>
+    </div>
+    <!-- Collapsible content -->
+
+  </nav>
+  <!--/.Navbar-->
+
+    <div class="container-fluid" style="padding: 10%;">
+
+<div class="row col-lg-12" style="margin-top: 3%;">
+        <div class="alert alert-info" role="alert" id="first">
+                Thank you for joining us !<br>
+                You will receive a confirmation mail for your free visit !
+                <a href="../views/index.html"><br>Back to Home</a>
+              </div>
+</div>
+        <div class="row col-lg-12" style="z-index: 0;">
+                <div class="col-md-8 col-sm-12" id="formContainer">
+                    
+                        <div class="row col-lg-12"  style="margin-bottom: 5%;" id="help">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10">
+                                        <p class="text">Help us to serve you better by filling this form before visiting !</p>
+                                </div>
+                   
+                          <div class="col-md-1"></div>
+                        </div>
+
+                        <div class="row col-lg-12" id="success">
+                                <div class="col-md-12 col-sm-12">
+                                        <div class="alert alert-success" role="alert" id="info">
+                                               Your info are successfully saved.
+                                              </div>
+                                </div>    
+                            </div>
+
+                        <div class="row col-lg-12"  style="margin-bottom: 5%;">
+                            <div class="col-md-1"></div>
+                
+                            <div class="col-md-5 col-sm-12">
+                                <input id="middlename" class="form-control" placeholder="MIDDLENAME"/>
+                            </div>
+
+                            <div class="col-md-5 col-sm-12">
+                                    <input id="datepicker" class="form-control" placeholder="BIRTHDATE" />
+                                </div>
+            
+                                
+                            <div class="col-md-1"></div>
+                        </div>
+                        
+
+                        <div class="row col-lg-12"  style="margin-bottom: 5%;">
+
+                            <div class="col-md-1"></div>
+                            <div class="col-md-11 col-sm-12">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample">
+                                            <label class="custom-control-label" for="defaultInline1">FEMALE</label>
+                                          </div>
+                                          
+                                   
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample">
+                                            <label class="custom-control-label" for="defaultInline2">MALE</label>
+                                          </div>
+                            </div>
+
+
+      
+                        </div>
+                        
+                        <div class="row col-lg-12"  style="margin-bottom: 5%;">
+                                <div class="col-md-1"></div>
+                    
+                                <div class="col-md-5 col-sm-12">
+                                    <input id="middlename" class="form-control" placeholder="SOCIAL SECURITY #"/>
+                                </div>
+    
+                                <div class="col-md-5 col-sm-12">
+                                        <div class="dropdown">
+                                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  BLOOD TYPE
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                  <a class="dropdown-item" href="#">A+</a>
+                                                  <a class="dropdown-item" href="#">A-</a>
+                                                  <a class="dropdown-item" href="#">B+</a>
+                                                  <a class="dropdown-item" href="#">B-</a>
+                                                  <a class="dropdown-item" href="#">O+</a>
+                                                  <a class="dropdown-item" href="#">O-</a>
+                                                  <a class="dropdown-item" href="#">AB+</a>
+                                                  <a class="dropdown-item" href="#">AB-</a>
+                                                </div>
+                                              </div>
+                                    </div>
+                
+                                    
+                                <div class="col-md-1"></div>
+                            </div>
+
+                            <div class="row col-lg-12"  style="margin-bottom: 5%;">
+                                    <div class="col-md-1"></div>
+                        
+                                    <div class="col-md-5 col-sm-12">
+                                        <input id="phys-name" class="form-control" placeholder="PREVIOUS PHYSICIAN NAME"/>
+                                    </div>
+        
+                                    <div class="col-md-5 col-sm-12">
+                                            <input id="phys-phone" class="form-control" placeholder="PREVIOUS PHYSICIAN PHONE"/>
+                                        </div>
+            
+                    
+                                        
+                                    <div class="col-md-1"></div>
+                                </div>
+
+
+<!-- 
+                        <div class="row col-lg-12" id="error">
+                            <div class="col-md-12 col-sm-12 text-center">
+                                    <p>Unavailable. Please choose another date and time.</p>
+                            </div>
+                        </div> -->
+            
+            
+                        <div class="row col-lg-12" style="margin-bottom: 5%;">
+            
+                            <div class="col-md-1"></div>
+                            <div class="col-md-5">
+                                <select class="selectpicker form-control" multiple data-live-search="true" id="injury" title="REASON OF INJURY">
+                                    <option>Surgery</option>
+                                    <option>Work Injury</option>
+                                    <option>Sports Injury</option>
+                                    <option>Accident</option>
+                                  </select>
+                            </div>
+
+                            <div class="col-md-5 col-sm-12">
+                                    <input id="other-injury" class="form-control" placeholder="OTHER" style="height: 44px;"/>
+                                </div>
+                            
+                            <div class="col-md-1"></div>
+                  
+                        </div>
+
+                        
+                        <div class="row col-lg-12" style="margin-bottom: 5%;">
+            
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10">
+                                    <select class="selectpicker form-control" multiple data-live-search="true" title="CURRENTLY SEEN BY">
+                                        <option>Chiropractor</option>
+                                        <option>Osteopath</option>
+                                        <option>Speech Therapist</option>
+                                        <option>Physical Therapist</option>
+                                        <option>Occupational Therapist</option>
+                                      </select>
+                                </div>
+
+                                
+                                <div class="col-md-1"></div>
+                      
+                            </div>
+
+
+            
+                        <div class="row col-lg-12"  style="margin-bottom: 5%;">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-10 col-sm-12">
+                                <!--Textarea with icon prefix-->
+                                <div>
+                                    <!-- <i class="fas fa-pencil-alt prefix inputIcons" ></i> -->
+                                    <textarea id="form22" class="md-textarea form-control" rows="3" placeholder="WHY ?"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
+            
+                        <div class="row col-lg-12">
+                                <!-- Sign up button -->
+                                <button id="saveBtn"
+                                  class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0 col-md-4 col-sm-12"
+                                  type="submit">SAVE</button>
+                        </div>
+
+                     
+                    </div>
+
+        
+
+                    <div class="col-md-4 col-sm-12">
+                            <div id="rightSection">
+                                    <header><h5>BUSINESS HOURS</h5></header>
+
+                                    <p class="hourText">Mon: 7:00 am - 5:00 pm</p>
+                                    <p class="hourText">Tue: 7:00 am - Noon</p>
+                                    <p class="hourText">Wed: 7:00 am - 5:00 pm</p>
+                                    <p class="hourText">Thur: 7:00 am - 5:00 pm</p>
+                                    <p class="hourText">Fri: 7:00 am - 5:00 pm</p>
+                
+                            </div>
+                </div>
+            
+        </div>
+    
+     
+    </div>
+
+
+    
+<!-- Footer -->
+  <footer class="page-footer font-small blue-grey lighten-5">
+
+        <div style="background-color: #33CC9A;">
+          <div class="container">
+    
+            <!-- Grid row-->
+            <div class="row py-4 d-flex align-items-center">
+    
+              <!-- Grid column -->
+              <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                <h6 class="mb-0">Get connected with us on social networks!</h6>
+              </div>
+              <!-- Grid column -->
+    
+              <!-- Grid column -->
+              <div class="col-md-6 col-lg-7 text-center text-md-right" id="socialMediaContainer">
+    
+                <!-- Facebook -->
+                <a class="fb-ic">
+                  <i class="fab fa-facebook-f white-text mr-4"> </i>
+                </a>
+                <!-- Twitter -->
+                <a class="tw-ic">
+                  <i class="fab fa-twitter white-text mr-4"> </i>
+                </a>
+                <!-- Google +-->
+                <a class="gplus-ic">
+                  <i class="fab fa-google-plus-g white-text mr-4"> </i>
+                </a>
+                <!--Linkedin -->
+                <a class="li-ic">
+                  <i class="fab fa-linkedin-in white-text mr-4"> </i>
+                </a>
+                <!--Instagram-->
+                <a class="ins-ic">
+                  <i class="fab fa-instagram white-text"> </i>
+                </a>
+    
+              </div>
+              <!-- Grid column -->
+    
+            </div>
+            <!-- Grid row-->
+    
+          </div>
+        </div>
+    
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left mt-5">
+    
+          <!-- Grid row -->
+          <div class="row mt-3 dark-grey-text">
+    
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+    
+              <!-- Content -->
+              <h6 class="text-uppercase font-weight-bold">Live Free Physical Therapy</h6>
+              <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+              <p>
+                Discover the solution to easy living and <a href="../views/signup.html">join us</a> now.
+              </p>
+    
+            </div>
+            <!-- Grid column -->
+    
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+    
+              <!-- Links -->
+              <h6 class="text-uppercase font-weight-bold">LINKS</h6>
+              <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+              <p>
+                <a class="dark-grey-text" href="../views/aboutus.html">About Us</a>
+              </p>
+              <p>
+                <a class="dark-grey-text" href="../views/reviews.html">Reviews</a>
+              </p>
+              <p>
+                <a class="dark-grey-text" href="../views/conditions.html">Conditions</a>
+              </p>
+              <p>
+                <a class="dark-grey-text" href="../views/techniques.html">Techniques</a>
+              </p>
+              <p>
+                <a class="dark-grey-text" href="../views/appointments.html">Appointment</a>
+              </p>
+              <p>
+                <a class="dark-grey-text" href="../views/contact.html">Contact Us</a>
+              </p>
+    
+            </div>
+            <!-- Grid column -->
+    
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+    
+              <!-- Links -->
+              <!-- <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+              <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+              <p>
+                <a class="dark-grey-text" href="#!">Your Account</a>
+              </p>
+              <p>
+                <a class="dark-grey-text" href="#!">Become an Affiliate</a>
+              </p>
+              <p>
+                <a class="dark-grey-text" href="#!">Shipping Rates</a>
+              </p>
+              <p>
+                <a class="dark-grey-text" href="#!">Help</a>
+              </p> -->
+    
+            </div>
+            <!-- Grid column -->
+    
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+    
+              <!-- Links -->
+              <h6 class="text-uppercase font-weight-bold">Contact</h6>
+              <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+              <p>
+                <i class="fas fa-home mr-3"></i> Baabdat, Principal Road</p>
+              <p>
+                <i class="fas fa-envelope mr-3"></i> livefreeclinic@gmail.com</p>
+              <p>
+                <i class="fas fa-phone mr-3"></i> + 961 04 234 567 </p>
+              <p>
+                <i class="fas fa-print mr-3"></i> + 961 04 234 567</p>
+    
+            </div>
+            <!-- Grid column -->
+    
+          </div>
+          <!-- Grid row -->
+    
+        </div>
+        <!-- Footer Links -->
+    
+        <!-- Copyright -->
+        <div class="footer-copyright text-center text-black-50 py-3">© 2019 Copyright:
+          <a class="dark-grey-text" href=""> Marianne Abi Kanaan</a>
+        </div>
+        <!-- Copyright -->
+    
+      </footer>
+      <!-- Footer -->
+
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+        integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+        integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+    <script src="../scripts/patient-form.js"></script>
+
+</body>
+
+
+</html>

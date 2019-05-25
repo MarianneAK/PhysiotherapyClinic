@@ -1,4 +1,20 @@
-@import url("https://fonts.googleapis.com/css?family=Hind:400,700");
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.myText{
+    font-family: Lato; 
+    font-size: 22px; 
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+    line-height: 34.2px; 
+    color: #495057;
+}
+
+.title{
+    font-family: "Open Sans" !important;
+    color: #1B7BBA !important;
+}
 
 input{
   margin-bottom: 10% !important;
@@ -27,8 +43,8 @@ input{
 }
 
 #appointmentBtn{
-    margin: auto;
-    background-color: #21d192;
+  margin: auto;
+  background-color: #33CC9A;
     color: white;
 }
 
@@ -43,7 +59,7 @@ input{
   color: white;
   text-align: center;
   padding: 5%;
-  background-color: #21d192;
+  background-color: #33CC9A;
   margin-bottom: 4%;
 }
 
@@ -95,8 +111,8 @@ h3 {
 
 .carousel-wrapper {
   position: relative;
-  width: 80%;
-  height: 70%;
+  width: 90%;
+  height: 85%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -170,4 +186,70 @@ h3 {
   overflow: visible;
 }
 
+.bootstrap-select .dropdown-toggle .filter-option-inner-inner, .dropdown-toggle:after{
+  color: #62686e;
+  font-weight: 400;
+}
 
+.custom-file-control:read-only, .form-control:read-only{
+  background-image: linear-gradient(0deg,#009688 2px,rgba(0,150,136,0) 0),linear-gradient(0deg,rgba(0,0,0,.26) 1px,transparent 0) !important;
+}
+
+.custom-file-control:disabled, .form-control:disabled, .form-control[readonly], [readonly].custom-file-control{
+  background-color: inherit !important;
+}
+
+#success{
+  display: none;
+}
+
+#appointmentBtn:hover{
+  background-color: #FFF;
+  color: #33CC9A;
+}
+
+#loginError{
+  display: none;
+}
+.field-icon {
+  float: right;
+  margin-left: -25px;
+  margin-top: -25px;
+  position: relative;
+  /* z-index: 2; */
+  bottom: 40px;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+  cursor: pointer;
+  color: white !important;
+}
+
+/* Tooltip container */
+.tooltipCustom {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltipCustom .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(37, 36, 36);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  font-size: 14px;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltipCustom:hover .tooltiptext {
+  visibility: visible;
+}
+.form-control:invalid{
+  background-image: linear-gradient(0deg,#009688 2px,rgba(0,150,136,0) 0),linear-gradient(0deg,rgba(0,0,0,.26) 1px,transparent 0) !important;
+}

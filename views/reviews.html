@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="../styles/reviews.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link rel="stylesheet" Reviews
+        href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+        integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+
+<body class="container-fluid" style="padding: 0; overflow-x: hidden;">
+
+     <!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark primary-color"
+style="background-color: #1B7BBA;width: 100%; position: fixed; padding: 1% 10%;">
+
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="index.html" style="width: 13%; padding: 0;">
+      <img src="../assets/images/logo.png" width="70%" height="100%">
+    </a>
+
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+      aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+
+      <!-- Links -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false" style="color: hsla(0,0%,100%,.5) !important;">About</a>
+          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="../views/aboutus.html">About Us</a>
+            <a class="dropdown-item" href="../views/reviews.html">Reviews</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">Treatments</a>
+          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="../views/conditions.html">Conditions</a>
+            <a class="dropdown-item" href="../views/techniques.html">Techniques</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="../views/appointments.html">Appointment</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../views/contact.html">Contact Us
+            <!-- <span class="sr-only">(current)</span> -->
+          </a>
+        </li>
+
+        <li class="nav-item" id="loginNav">
+          <a class="nav-link" data-toggle="modal" data-target="#modalLoginForm" href="">Log In</a>
+        </li>
+
+        <li class="nav-item" id="signupNav">
+          <a class="nav-link"  href="../views/signup.html">Sign Up</a>
+        </li>
+
+        <li class="nav-item dropdown" id="myAccountNav" style="display: none;">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">My Account</a>
+          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="../views/patient-form.html">My Info</a>
+            <a class="dropdown-item" href="#">Log Out</a>
+          </div>
+        </li>
+
+      </ul>
+      <!-- Links -->
+
+      <form class="form-inline">
+        <div class="md-form my-0">
+          <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"> -->
+
+          <!-- <script>
+              (function() {
+                var cx = '015812204710777810795:e64yqemmsc0';
+                var gcse = document.createElement('script');
+                gcse.type = 'text/javascript';
+                gcse.async = true;
+                gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(gcse, s);
+              })();
+            </script>
+            <gcse:search enableAutoComplete="true"></gcse:search> -->
+
+        </div>
+      </form>
+    </div>
+    <!-- Collapsible content -->
+
+  </nav>
+  <!--/.Navbar-->
+
+
+  <div style="padding: 6% 0;">
+
+
+    <!-- <ul class="breadcrumb">
+      <li>About</li>
+      <li><a href="../views/reviews.html">Reviews</a></li>
+    </ul> -->
+    <div class="row col-lg-12" style="margin-top: 5%;">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+
+            <h3 class="title">Review Us !</h3>
+  
+         
+                  <div class="row"style="margin-top: 3%;" id="loginForm">
+                    <div class="col-md-6 col-sm-12">
+                      <!-- First name -->
+                      <div class="md-form">
+                        <input name="email" type="email" id="email" class="form-control" placeholder="Email *" required />
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                      <!-- Last name -->
+                      <div class="md-form">
+                        <input name="password" type="password" id="passwordSignUp" class="form-control" placeholder="Password *" required />
+                        <span  toggle="#passwordSignUp" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                      </div>
+                    </div>
+                  </div>
+         
+         
+                  <div class="rating">
+                <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Excellent">5 stars</label>
+                <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Good">4
+                    stars</label>
+                <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Average">3
+                    stars</label>
+                <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Meh">2
+                    stars</label>
+                <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Really Bad">1
+                    star</label>
+          </div>
+          
+       
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+
+
+    <div class="row col-lg-12" style="margin-bottom: 3%;">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 col-sm-12">
+            <i class="fas fa-pencil-alt prefix inputIcons"></i>
+            <textarea id="review" class="md-textarea form-control" rows="3"
+                placeholder="ADDITIONNAL COMMENTS"></textarea>
+
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+
+    <div class="row col-lg-12">
+            <div class="col-md-3"></div>
+            <div class="col-md-4"></div>
+        <div class="col-md-2 col-sm-12">
+                <button id="submitCommentBtn" class="btn btn-success">SUBMIT</button>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+
+    <div class="row col-lg-12">
+
+        <div class="col-md-3"></div>
+        <div class="col-md-6 col-sm-12" id="reviewsContainer">
+            <div class="card">
+                <div class="card-header">
+                    <img src="../assets/icons/rating-star.svg" class="ratingStarFilled">
+                    <img src="../assets/icons/rating-star.svg" class="ratingStarFilled">
+                    <img src="../assets/icons/rating-star.svg" class="ratingStarFilled">
+                    <img src="../assets/icons/rating-star.svg" class="ratingStarFilled">
+                    <img src="../assets/icons/rating-star-empty.svg" class="ratingStarFilled">
+                    <i class="far fa-flag"></i>
+                </div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <p class="reviewText">They explained what and why the therapy was before doing it, which set me
+                            at ease. Kyle was very helpful in assessing my condition upon arrival and worked with me
+                            throughout the process to restore my neck back to normal condition. I would definitely
+                            recommend Empower Physical Therapy to anyone that need improvement in mobility, balance,
+                            posture, etc. Richard L..</p>
+                        <footer class="blockquote-footer">Richard L.</footer>
+                    </blockquote>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <img src="../assets/icons/rating-star.svg" class="ratingStarFilled">
+                    <img src="../assets/icons/rating-star.svg" class="ratingStarFilled">
+                    <img src="../assets/icons/rating-star.svg" class="ratingStarFilled">
+                    <img src="../assets/icons/rating-star.svg" class="ratingStarFilled">
+                    <img src="../assets/icons/rating-star-empty.svg" class="ratingStarFilled">
+                    <i class="far fa-flag"></i>
+                </div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <p class="reviewText">They explained what and why the therapy was before doing it, which set me
+                            at ease. Kyle was very helpful in assessing my condition upon arrival and worked with me
+                            throughout the process to restore my neck back to normal condition. I would definitely
+                            recommend Empower Physical Therapy to anyone that need improvement in mobility, balance,
+                            posture, etc. Richard L..</p>
+                        <footer class="blockquote-footer">Richard L.</footer>
+                    </blockquote>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <img src="../assets/icons/rating-star.svg" class="ratingStarFilled">
+                    <img src="../assets/icons/rating-star.svg" class="ratingStarFilled">
+                    <img src="../assets/icons/rating-star.svg" class="ratingStarFilled">
+                    <img src="../assets/icons/rating-star.svg" class="ratingStarFilled">
+                    <img src="../assets/icons/rating-star-empty.svg" class="ratingStarFilled">
+                    <i class="far fa-flag"></i>
+                </div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <p class="reviewText">They explained what and why the therapy was before doing it, which set me
+                            at ease. Kyle was very helpful in assessing my condition upon arrival and worked with me
+                            throughout the process to restore my neck back to normal condition. I would definitely
+                            recommend Empower Physical Therapy to anyone that need improvement in mobility, balance,
+                            posture, etc. Richard L..</p>
+                        <footer class="blockquote-footer">Richard L.</footer>
+                    </blockquote>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <img src="../assets/icons/rating-star.svg" class="ratingStarFilled">
+                    <img src="../assets/icons/rating-star.svg" class="ratingStarFilled">
+                    <img src="../assets/icons/rating-star.svg" class="ratingStarFilled">
+                    <img src="../assets/icons/rating-star.svg" class="ratingStarFilled">
+                    <img src="../assets/icons/rating-star-empty.svg" class="ratingStarFilled">
+                    <i class="far fa-flag"></i>
+                    
+                </div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <p class="reviewText">They explained what and why the therapy was before doing it, which set me
+                            at ease. Kyle was very helpful in assessing my condition upon arrival and worked with me
+                            throughout the process to restore my neck back to normal condition. I would definitely
+                            recommend Empower Physical Therapy to anyone that need improvement in mobility, balance,
+                            posture, etc. Richard L..</p>
+                        <footer class="blockquote-footer">Richard L.</footer>
+                    </blockquote>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <img src="../assets/icons/rating-star.svg" class="ratingStarFilled">
+                    <img src="../assets/icons/rating-star.svg" class="ratingStarFilled">
+                    <img src="../assets/icons/rating-star.svg" class="ratingStarFilled">
+                    <img src="../assets/icons/rating-star.svg" class="ratingStarFilled">
+                    <img src="../assets/icons/rating-star-empty.svg" class="ratingStarFilled">
+                </div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <p class="reviewText">They explained what and why the therapy was before doing it, which set me
+                            at ease. Kyle was very helpful in assessing my condition upon arrival and worked with me
+                            throughout the process to restore my neck back to normal condition. I would definitely
+                            recommend Empower Physical Therapy to anyone that need improvement in mobility, balance,
+                            posture, etc. Richard L..</p>
+                        <footer class="blockquote-footer">Richard L.</footer>
+                    </blockquote>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <img src="../assets/icons/rating-star.svg" class="ratingStarFilled">
+                    <img src="../assets/icons/rating-star.svg" class="ratingStarFilled">
+                    <img src="../assets/icons/rating-star.svg" class="ratingStarFilled">
+                    <img src="../assets/icons/rating-star.svg" class="ratingStarFilled">
+                    <img src="../assets/icons/rating-star-empty.svg" class="ratingStarFilled">
+                </div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <p class="reviewText">They explained what and why the therapy was before doing it, which set me
+                            at ease. Kyle was very helpful in assessing my condition upon arrival and worked with me
+                            throughout the process to restore my neck back to normal condition. I would definitely
+                            recommend Empower Physical Therapy to anyone that need improvement in mobility, balance,
+                            posture, etc. Richard L..</p>
+                        <footer class="blockquote-footer">Richard L.</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+
+    
+  <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center" style="background-color: #33CC9A;">
+        <h4 class="modal-title w-100" style="color: white;">LOG IN</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <i class="fas fa-envelope prefix grey-text"></i>
+          <input type="email" id="loginEmail" class="form-control validate" placeholder="Email">
+          <!-- <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label> -->
+        </div>
+
+        <div class="md-form mb-4">
+          <i class="fas fa-lock prefix grey-text"></i>
+          <input type="password" id="loginPass" class="form-control validate" placeholder="Password">
+          <span toggle="#loginPass" class="fa fa-fw fa-eye field-icon toggle-password" style="color: #33CC9A;"></span>
+          <!-- <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label> -->
+        </div>
+
+
+        <p>Don't have an account ? <a href="signup.html">Sign Up</a></p>
+        <div id="loginError">
+          <div class="alert alert-danger" role="alert">
+            Wrong email or password. Please try again.
+          </div>
+        </div>
+
+      </div>
+
+      <div class="modal-footer d-flex justify-content-center">
+        <button id="loginBtn"
+          class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0 col-md-4 col-sm-12">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Footer -->
+<footer class="page-footer font-small blue-grey lighten-5">
+
+    <div style="background-color: #33CC9A;">
+      <div class="container">
+
+        <!-- Grid row-->
+        <div class="row py-4 d-flex align-items-center">
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+            <h6 class="mb-0">Get connected with us on social networks!</h6>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-7 text-center text-md-right" id="socialMediaContainer">
+
+            <!-- Facebook -->
+            <a class="fb-ic">
+              <i class="fab fa-facebook-f white-text mr-4"> </i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic">
+              <i class="fab fa-twitter white-text mr-4"> </i>
+            </a>
+            <!-- Google +-->
+            <a class="gplus-ic">
+              <i class="fab fa-google-plus-g white-text mr-4"> </i>
+            </a>
+            <!--Linkedin -->
+            <a class="li-ic">
+              <i class="fab fa-linkedin-in white-text mr-4"> </i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic">
+              <i class="fab fa-instagram white-text"> </i>
+            </a>
+
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row-->
+
+      </div>
+    </div>
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left mt-5">
+
+      <!-- Grid row -->
+      <div class="row mt-3 dark-grey-text">
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+
+          <!-- Content -->
+          <h6 class="text-uppercase font-weight-bold">Live Free Physical Therapy</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            Discover the solution to easy living and <a href="../views/signup.html">join us</a> now.
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">LINKS</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <a class="dark-grey-text" href="../views/aboutus.html">About Us</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="../views/reviews.html">Reviews</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="../views/conditions.html">Conditions We Treat</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="../views/techniques.html">Techniques</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="../views/appointments.html">Appointment</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="../views/contact.html">Contact Us</a>
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+          <!-- Links -->
+          <!-- <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <a class="dark-grey-text" href="#!">Your Account</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="#!">Become an Affiliate</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="#!">Shipping Rates</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="#!">Help</a>
+          </p> -->
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">Contact</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <i class="fas fa-home mr-3"></i> Baabdat, Principal Road</p>
+          <p>
+            <i class="fas fa-envelope mr-3"></i> livefreeclinic@gmail.com</p>
+          <p>
+            <i class="fas fa-phone mr-3"></i> + 961 04 234 567 </p>
+          <p>
+            <i class="fas fa-print mr-3"></i> + 961 04 234 567</p>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center text-black-50 py-3">© 2019 Copyright:
+      <a class="dark-grey-text" href=""> Marianne Abi Kanaan</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+        integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+        integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous">
+    </script>
+    <script src="../scripts/reviews.js"></script>
+</body>
+
+</html>

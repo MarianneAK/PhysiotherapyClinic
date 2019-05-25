@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Contact Us</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="../styles/contact.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link rel="stylesheet"
+        href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+        integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+
+<body class="container-fluid" style="padding: 0; overflow-x: hidden;">
+
+    
+ <!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark primary-color"
+style="background-color: #1B7BBA;width: 100%; position: fixed; padding: 1% 10%; top: 0;">
+
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="index.html" style="width: 13%; padding: 0;">
+      <img src="../assets/images/logo.png" width="70%" height="100%">
+    </a>
+
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+      aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+
+      <!-- Links -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">About</a>
+          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="../views/aboutus.html">About Us</a>
+            <a class="dropdown-item" href="../views/reviews.html">Reviews</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">Treatments</a>
+          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="../views/conditions.html">Conditions We Treat</a>
+            <a class="dropdown-item" href="../views/techniques.html">Techniques</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="../views/appointments.html">Appointment</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../views/contact.html" style="color: hsla(0,0%,100%,.5) !important;">Contact Us
+            <!-- <span class="sr-only">(current)</span> -->
+          </a>
+        </li>
+
+        <li class="nav-item" id="loginNav">
+          <a class="nav-link" data-toggle="modal" data-target="#modalLoginForm" href="">Log In</a>
+        </li>
+
+        <li class="nav-item" id="signupNav">
+          <a class="nav-link"  href="../views/signup.html">Sign Up</a>
+        </li>
+
+        <li class="nav-item dropdown" id="myAccountNav" style="display: none;">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">My Account</a>
+          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="../views/patient-form.html">My Info</a>
+            <a class="dropdown-item" href="#">Log Out</a>
+          </div>
+        </li>
+
+      </ul>
+      <!-- Links -->
+
+      <form class="form-inline">
+        <div class="md-form my-0">
+          <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"> -->
+
+          <!-- <script>
+              (function() {
+                var cx = '015812204710777810795:e64yqemmsc0';
+                var gcse = document.createElement('script');
+                gcse.type = 'text/javascript';
+                gcse.async = true;
+                gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(gcse, s);
+              })();
+            </script>
+            <gcse:search enableAutoComplete="true"></gcse:search> -->
+
+        </div>
+      </form>
+    </div>
+    <!-- Collapsible content -->
+
+  </nav>
+  <!--/.Navbar-->
+
+    <div class="row col-lg-12" style="margin: 10%  0 1% 0;">
+        <div class="col-md-1"></div>
+        <div class="col-md-7 col-sm-12" style="margin-bottom: 3%;">
+            <!--Section: Contact v.2-->
+            <section class="mb-4">
+
+
+
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-md-9 mb-md-0 mb-5">
+                        <form id="contact-form" name="contact-form" action="contact.html?success" method="POST">
+
+                            <!--Section heading-->
+                            <h3 class="h3-responsive font-weight-bold text-center my-4 title">CONTACT US</h3>
+                            <!--Section description-->
+                            <p class="text-center w-responsive mx-auto mb-5 text">Do you have any questions? Please do
+                                not hesitate to contact us directly. Our team will come back to you within
+                                a matter of hours to help you.</p>
+                            <!--Grid row-->
+                            <div class="row">
+
+                                <!--Grid column-->
+                                <div class="col-md-4">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="name" class="form-control"
+                                            placeholder="Full Name *" required>
+                                    </div>
+                                </div>
+                                <!--Grid column-->
+
+                                <!--Grid column-->
+                                <div class="col-md-4">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="email" name="email" class="form-control"
+                                            placeholder="Email *" required>
+                                    </div>
+                                </div>
+                                <!--Grid column-->
+
+                                <!--Grid column-->
+                                <div class="col-md-4">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="phone" name="phone" class="form-control"
+                                            placeholder="Phone">
+                                    </div>
+                                </div>
+                                <!--Grid column-->
+
+                            </div>
+                            <!--Grid row-->
+
+                            <div class="row">
+
+                                <!--Grid column-->
+                                <div class="col-md-12">
+
+                                    <div class="md-form">
+                                        <textarea type="text" id="message" name="message" rows="3"
+                                            class="form-control md-textarea" placeholder="Your Message *" required></textarea>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!--Grid row-->
+
+                            <div class="row" style="margin-top: 4%;">
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-4 col-sm-12">
+                                        <button class="btn" id="sendBtn" type="submit">Send</button>
+                                    </div>
+                                    <div class="col-md-4"></div>
+        
+                                </div>
+
+                        </form>
+
+             
+       
+                    </div>
+                    <!--Grid column-->
+
+
+
+                </div>
+
+                <div class="row col-lg-10 col-sm-12" id="success">
+        
+                            <div class="alert alert-success" role="alert">
+                                   Message successfully sent.
+                            </div>
+        
+
+                    </div>
+
+            </section>
+            <!--Section: Contact v.2-->
+        </div>
+
+        <div class="col-md-3 col-sm-12">
+            <div id="rightSection">
+                <header>
+                    <h5>BUSINESS HOURS</h5>
+                </header>
+
+                <p class="hourText">Mon: 7:00 am - 5:00 pm</p>
+                <p class="hourText">Tue: 7:00 am - Noon</p>
+                <p class="hourText">Wed: 7:00 am - 5:00 pm</p>
+                <p class="hourText">Thur: 7:00 am - 5:00 pm</p>
+                <p class="hourText">Fri: 7:00 am - 5:00 pm</p>
+
+            </div>
+        </div>
+
+        <div class="col-md-1"></div>
+
+
+    </div>
+
+
+    <div class="row col-lg-12" style="margin: 1% 0 5% 0;">
+        <div class="col-md-1"></div>
+        <div class="col-md-5 col-sm-12">
+            <iframe id="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26495.286554866925!2d35.65824399661982!3d33.891950561572834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f396aade1cba9%3A0x8094b0aa2bf90f26!2sBaabdat!5e0!3m2!1sen!2slb!4v1556723543679!5m2!1sen!2slb"
+                frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+
+        <!--Grid column-->
+        <div class="col-md-2 text-center" style="padding-top: 2%;">
+            <ul class="list-unstyled mb-0">
+                <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                    <p>Baabdat, Principal Road</p>
+                </li>
+
+                <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                    <p>+961 04 234 567</p>
+                </li>
+
+                <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                    <p>livefree@gmail.com</p>
+                </li>
+            </ul>
+        </div>
+          
+        <div class="col-md-3 col-sm-12">
+            <div id="rightSection" style="margin-top: 0;">
+                <header>
+                    <h5>NEWS</h5>
+                </header>
+
+                <p class="hourText">News 1</p>
+                <p class="hourText">News 2</p>
+                <p class="hourText">News 3</p>
+                <p class="hourText">News 4</p>
+                <p class="hourText">News 5</p>
+
+            </div>
+        </div>
+
+        <div class="col-md-1"> </div>
+       
+        <!--Grid column-->
+
+    </div>
+
+    <!-- Footer -->
+  <footer class="page-footer font-small blue-grey lighten-5">
+
+    <div style="background-color: #33CC9A;">
+      <div class="container">
+
+        <!-- Grid row-->
+        <div class="row py-4 d-flex align-items-center">
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+            <h6 class="mb-0">Get connected with us on social networks!</h6>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-7 text-center text-md-right" id="socialMediaContainer">
+
+            <!-- Facebook -->
+            <a class="fb-ic">
+              <i class="fab fa-facebook-f white-text mr-4"> </i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic">
+              <i class="fab fa-twitter white-text mr-4"> </i>
+            </a>
+            <!-- Google +-->
+            <a class="gplus-ic">
+              <i class="fab fa-google-plus-g white-text mr-4"> </i>
+            </a>
+            <!--Linkedin -->
+            <a class="li-ic">
+              <i class="fab fa-linkedin-in white-text mr-4"> </i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic">
+              <i class="fab fa-instagram white-text"> </i>
+            </a>
+
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row-->
+
+      </div>
+    </div>
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left mt-5">
+
+      <!-- Grid row -->
+      <div class="row mt-3 dark-grey-text">
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+
+          <!-- Content -->
+          <h6 class="text-uppercase font-weight-bold">Live Free Physical Therapy</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            Discover the solution to easy living and <a href="../views/signup.html">join us</a> now.
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">LINKS</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <a class="dark-grey-text" href="../views/aboutus.html">About Us</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="../views/reviews.html">Reviews</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="../views/conditions.html">Conditions</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="../views/techniques.html">Techniques</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="../views/appointments.html">Appointment</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="../views/contact.html">Contact Us</a>
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+          <!-- Links -->
+          <!-- <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <a class="dark-grey-text" href="#!">Your Account</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="#!">Become an Affiliate</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="#!">Shipping Rates</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="#!">Help</a>
+          </p> -->
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">Contact</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <i class="fas fa-home mr-3"></i> Baabdat, Principal Road</p>
+          <p>
+            <i class="fas fa-envelope mr-3"></i> livefreeclinic@gmail.com</p>
+          <p>
+            <i class="fas fa-phone mr-3"></i> + 961 04 234 567 </p>
+          <p>
+            <i class="fas fa-print mr-3"></i> + 961 04 234 567</p>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center text-black-50 py-3">© 2019 Copyright:
+      <a class="dark-grey-text" href=""> Marianne Abi Kanaan</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+        integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+        integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous">
+    </script>
+    <script src="../scripts/contact.js"></script>
+</body>
+
+</html>

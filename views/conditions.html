@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Conditions</title>
+  <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="../styles/conditions.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <link rel="stylesheet"
+    href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+    integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+
+<body class="container-fluid" style="padding: 0; overflow-x: hidden;">
+
+     <!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark primary-color"
+style="background-color: #1B7BBA;width: 100%; position: fixed; padding: 1% 10%;">
+
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="index.html" style="width: 13%; padding: 0;">
+      <img src="../assets/images/logo.png" width="70%" height="100%">
+    </a>
+
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+      aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+
+      <!-- Links -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">About</a>
+          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="../views/aboutus.html">About Us</a>
+            <a class="dropdown-item" href="../views/reviews.html">Reviews</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false" style="color: hsla(0,0%,100%,.5) !important;">Treatments</a>
+          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="../views/conditions.html">Conditions We Treat</a>
+            <a class="dropdown-item" href="../views/techniques.html">Techniques</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="../views/appointments.html">Appointment</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../views/contact.html">Contact Us
+            <!-- <span class="sr-only">(current)</span> -->
+          </a>
+        </li>
+
+        <li class="nav-item" id="loginNav">
+          <a class="nav-link" data-toggle="modal" data-target="#modalLoginForm" href="">Log In</a>
+        </li>
+
+        <li class="nav-item" id="signupNav">
+          <a class="nav-link"  href="../views/signup.html">Sign Up</a>
+        </li>
+
+        <li class="nav-item dropdown" id="myAccountNav" style="display: none;">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">My Account</a>
+          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="../views/patient-form.html">My Info</a>
+            <a class="dropdown-item" href="#">Log Out</a>
+          </div>
+        </li>
+
+      </ul>
+      <!-- Links -->
+
+      <form class="form-inline">
+        <div class="md-form my-0">
+          <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"> -->
+
+          <!-- <script>
+              (function() {
+                var cx = '015812204710777810795:e64yqemmsc0';
+                var gcse = document.createElement('script');
+                gcse.type = 'text/javascript';
+                gcse.async = true;
+                gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(gcse, s);
+              })();
+            </script>
+            <gcse:search enableAutoComplete="true"></gcse:search> -->
+
+        </div>
+      </form>
+    </div>
+    <!-- Collapsible content -->
+
+  </nav>
+  <!--/.Navbar-->
+
+        
+
+<div class="row col-lg-12" style="padding: 8% 0;">
+
+  <!-- <div  class="row col-lg-12" style="padding: 0;">
+    <ul class="breadcrumb">
+      <li>Treatments</li>
+      <li><a href="../views/conditions.html">Conditions We Treat</a></li>
+    </ul>
+  </div> -->
+        <div class="col-md-2"></div>
+        <div class="col-md-5 col-sm-12" id="humanBody"  >
+            <!-- <img src="../assets/human-body.png" alt="human-body" width="100%"> -->
+          
+                <a id="bodyPart1" class="bodyPart" body-part="head" title="Head and Neck" ></a>
+                <a id="bodyPart2" class="bodyPart" body-part="back" title="Back" ></a>
+                <a id="bodyPart3" class="bodyPart" body-part="foot" title="Foot and Ankle" ></a>
+                <a id="bodyPart4" class="bodyPart" body-part="shoulder" title="Shoulder"></a>
+                <a id="bodyPart5" class="bodyPart" body-part="hand" title="Elbow, Wrist and Hand"></a>
+                <a id="bodyPart6" class="bodyPart" body-part="hip" title="Hip" ></a>
+                <a id="bodyPart7" class="bodyPart" body-part="knee" title="Knee, Balance and Walking"></a>
+
+          </div>
+
+    <div class="col-md-3 col-sm-12"  id="conditionsList" style="margin-bottom: 5%;">
+       <div>
+
+        
+            <div  id="main">
+                    <h5 class="title">Conditions We Treat</h5>
+        
+                    <p class="text" style="margin-top: 10%;">Click on the areas highlighted on the body diagram for information on common conditions we treat and how physical therapy can help.</p>
+
+                </div>
+
+        <div class="list" id="shoulder">
+            <h5 class="title">Shoulder</h5>
+
+            <ul>
+                <li  class="text conditionLi" data-container="body" data-toggle="popover" data-placement="left" data-content="Fractures in the shoulder occur for a variety of reasons, but typically from a fall onto the shoulder itself. Fractures can occur in seniors also due to osteoporosis (thinning and weakening of bone). The goal with fracture management is to provide a safe position for the bone to heal (typically around 8 weeks), while maintaining range of motion. As the bone heals, strengthening can begin and rehabilitation back to normal activities is progressed. At times surgery may be needed to hold the bone together with plates or screws. This stabilizes the bone, but does disrupt muscles and leads to more weakness in the shoulder muscles. Physical therapy is very much needed after this to restore normal range of motion and strength to the shoulder. Recovery times can vary, but traditionally take 12–16 weeks." data-original-title="Fractures" title="Fractures">Fractures</li>
+                <li  class="text conditionLi" data-container="body" data-toggle="popover" data-placement="left" data-content="There are a variety of shoulder surgeries that may have to be done in order to stabilize the shoulder, repair damaged tendons or ligaments. With the advances in arthroscopic surgery, recovery times for shoulder injuries have improved, however physical therapy is still needed to reduce pain quickly, restore range of motion, improve strength and return the individual to the normal activities they like to do." data-original-title="Post-surgery Rehab" title="Post-surgery Rehab">Post-surgery Rehab</li>
+                <li  class="text conditionLi" data-container="body" data-toggle="popover" data-placement="left" data-content="Bursitis is inflammation of a bursa and tendonitis is inflammation of a tendon. A bursa is a fluid filled sac that sits between muscles or tissues to cushion and reduce friction. In the shoulder there is a rather large bursa between the deltoid muscle and joint. This is called the sub-deltoid bursa. This bursa can often become inflamed due to abnormal joint movements, poor posture and weakness of the surrounding musculature. This causes strain to the tissues and excessive friction on the bursa. People tend to feel pain with movement and especially movement out to the side or reaching behind them. Tendons connect muscles to bones. In the shoulder common areas for tendonitis are in the rotator cuff tendons (supraspinatus, infraspinatus, teres minor and subscapularis) and bicep tendons. Pain can be felt deep in the shoulder or in the front of the shoulder. Pain is usually felt as a sharp, catching sensation with certain movements." data-original-title="Bursitis / Tendonitis" title="Bursitis / Tendonitis">Bursitis / Tendonitis</li>
+
+            </ul>
+        </div>
+
+        <div  class="list" id="hip">
+            <h5 class="title">Hip</h5>
+
+            <ul>
+                <li  class="text conditionLi" data-container="body" data-toggle="popover" data-placement="left" data-content="The piriformis muscle is deep in the buttocks and helps with rotating the hip. The sciatic nerve typically dives underneath the piriformis muscle as it makes it way down to the leg. With excessive sitting, loss of movement in the hips or trauma, the piriformis muscle can press down onto the sciatic nerve. Typically, mild symptoms cause aching deep into the buttock and often radiating pain to the outer thigh. With more severe cases, tingling, numbness or severe pain can radiate down the thigh." data-original-title="Piriformis Syndrome" title="Piriformis Syndrome">Piriformis Syndrome</li>
+                <li  class="text conditionLi" data-container="body" data-toggle="popover" data-placement="left" data-content="Osteoarthritis of the hip can be painful as the hip is needed to move with sit to stand, walking, squatting and bending. The hips take a lot of wear and tear over the years leading to a degeneration of the cartilage that lines the joint. As the cartilage wears over time, the joint becomes stiffer and the muscles of the buttocks generally weaken over time. This compounds the effects on the hip causing grinding and wearing. In advanced stages, bony spurs can form around the joint and even change the shape of the joint. Most minor to moderate cases of hip osteoarthritis can highly benefit from physical therapy. In advanced stages a total or partial hip replacement may be needed to repair the damaged joint. Physical therapy in the hospital and outpatient facilities is highly important in the recovery from a hip replacement surgery." data-original-title="Osteoarthritis of The Hip" title="Osteoarthritis of The Hip">Osteoarthritis of The Hip</li>
+                <li  class="text conditionLi" data-container="body" data-toggle="popover" data-placement="left" data-content="Sprains refer to injuries of the ligaments (connect bone to bone) and strains refer to injuries of the muscles or tendons (connect muscle to bone). Sprains and strains occur from quick over-stretching of the tissues causing micro-tearing and subsequent injury. Swelling begins as part of the inflammation process, causing pain and difficulty with movement. The first step in treating sprains or strains in the hip is to rest, ice and elevate it. With severe limitations in movement you should see your physical therapist right away. There are different levels of sprain or strain from mild to severe. In some cases, the tearing can be complete and even be in need of surgical repair." data-original-title="Hip Sprain / Strain" title="Hip Sprain / Strain">Hip Sprain / Strain</li>
+
+            </ul>
+        </div>
+
+        <div  class="list" id="head">
+            <h5 class="title">Head and Neck</h5>
+
+            <ul>
+                <li  class="text conditionLi" data-container="body" data-toggle="popover" data-placement="left" data-content="There are many different reasons for neck pain. The neck requires good alignment, proper movement, strength and stability to work correctly. The neck or cervical spine has to bear the weight of the head, which is around 10-12lbs (the weight of a bowling ball). With injury or prolonged poor posture (for example sitting at a computer), change in alignment, weakness and instability start to occur. This irritates the structures of the neck and can even impinge on the nerves exiting the neck, or the central canal protecting the spinal cord." data-original-title="Neck Pain" title="Neck Pain">Neck Pain</li>
+                <li  class="text conditionLi" data-container="body" data-toggle="popover" data-placement="left" data-content="Whiplash can occur with many different accidents, but is often seen in motor vehicle accidents. The weight of the head and spine is whipped back and forth with the fast movement of an accident or fall. The muscles in the neck don't have time to react and the harsh forces, strain, rip and tear muscles, ligaments and other tissues. In severe cases, fractures can occur in the bones of the neck (vertebrae). Due to the shock and trauma initially from an accident, pain may or may not be present. Whiplash typically feels worse 1–2 days after the injury as inflammation sets in and tissues become swollen. This can lead to headaches, pain with movement and even numbness / tingling into the upper extremities. Often, people can have long standing weakness of the neck muscles, leading to future problems, if their whiplash is not fully treated. Strengthening and postural exercises are very important to maintain stability in the neck after a whiplash injury." data-original-title="Whiplash" title="Whiplash">Whiplash</li>
+                <li  class="text conditionLi" data-container="body" data-toggle="popover" data-placement="left" data-content="As a normal part of the aging process, the fluid filled discs between our neck bones (vertebrae) dry out and shrink. However, in some individuals, this can be excessive, leading to a severe loss of height in one or more sections of the neck. This loss of height can increase rubbing of bone on bone, produce bone spurring, increase pressure on joints and nerves exiting the neck. Symptoms can range from chronic aching pain in the neck, to radiating pain in the arms, numbness / tingling and headaches." data-original-title="Degenerative Disc Disease" title="Degenerative Disc Disease">Degenerative Disc Disease</li>
+
+            </ul>
+        </div>
+
+        <div  class="list" id="back">
+            <h5 class="title">Back</h5>
+
+            <ul>
+                <li  class="text conditionLi" data-container="body" data-toggle="popover" data-placement="left" data-content="Sciatica is the term used to describe radiating pain into the buttock that can travel down the back of the thigh. Often this pain is achy and spread out along these areas. Sciatica is a result of irritation to the sciatic nerve, which travels deep in the buttock and down the back of the leg. In about 20% of people, the sciatic nerve pierces through the piriformis muscle deep in the buttock instead of under it. This can make the sciatic nerve more susceptible to irritation and pressure from the piriformis muscle. The piriformis muscle helps guide hip movement, but can become very tight with prolonged sitting. This increased tightness causes pressure and irritation to the sciatic nerve causing pain." data-original-title="Sciatica" title="Sciatica">Sciatica</li>
+                <li  class="text conditionLi" data-container="body" data-toggle="popover" data-placement="left" data-content="Spondylolisthesis is a condition by where one spinal bone (vertebrae) is not in alignment with the other. Typically, a slippage forward is found in the very low back at the 4th or 5th lumbar (low back) vertebrae. This is due to a stretching out of the ligaments that hold the bones together or possibly a fracture. With poor posture and weakened abdominals as well as spinal muscles, the increase in the angle of the spine becomes too much over time and misalignment of the bones occurs. Symptoms can be mild such as general fatigue to the low back, achy pain or severe symptoms if there is compression on the nerves exciting the spine or spinal cord. There are varying degrees of severity. Most fall into a mild to moderate category that can be stabilized with improved posture and muscle strengthening. In severe cases, surgery may be necessary to fuse the area and bring stability back." data-original-title="Spondylolisthesis" title="Spondylolisthesis">Spondylolisthesis</li>
+                <li  class="text conditionLi" data-container="body" data-toggle="popover" data-placement="left" data-content="Mid back pain refers to pain in the “thoracic” spine. This is the area from the shoulders down to the mid back area. Pain in this area can be for a variety of reasons, but typically occurs from poor posture or a forward slouched posture. With this posture, your back muscles stretch out, causing weakness. Pain can often feel like a burning or sometimes shooting pain to the mid back area. At times, pain can even feel like it is radiating under the shoulder blade. However, with most mid back pain, it can be difficult to really pinpoint the area it is hurting." data-original-title="Mid back pain" title="Mid back pain">Mid back pain</li>
+            </ul>
+        </div>
+
+
+        <div  class="list" id="knee">
+            <h5 class="title">Knee</h5>
+
+            <ul>
+                <li  class="text conditionLi" data-container="body" data-toggle="popover" data-placement="left" data-content="Sprains refer to injuries of the ligaments (connect bone to bone) and strains refer to injuries of the muscles or tendons (connect muscle to bone). Sprains and strains occur from quick over-stretching of the tissues causing micro-tearing and subsequent injury. Swelling begins as part of the inflammation process, causing pain and difficulty with movement. The first step in treating sprains or strains in the knee is to rest, ice and elevate it. With severe limitations in movement you should see our physical therapists right away. There are different levels of sprain or strain from mild to severe. In some cases, the tearing can be complete and even be in need of surgical repair." data-original-title="Knee Sprain / Strain" title="Knee Sprain / Strain">Knee Sprain / Strain</li>
+                <li  class="text conditionLi" data-container="body" data-toggle="popover" data-placement="left" data-content="It takes us at least 12 months as a baby to learn the fundamentals of walking. It takes even longer to learn how to walk properly and eventually run. Walking is very complex and requires good balance, the ability to know where your joints are in space (proprioception), the ability to know how your joints are moving (kinesthesia), good range of motion and strength. As we age, with declining activity or after an injury, walking can become difficult. With pain in the knee or hip, our walking pattern can change, leaving us with a limp and possibly back pain. Changes in posture can also be responsible for changes in walking patterns. When walking patterns change, abnormal stresses and strains with everyday activities can be transmitted to areas it shouldn’t. For example, if you have knee pain and you begin to limp, the other hip and your spine now have to take double the weight. This can lead to pain and dysfunction in those areas also. The good news is that walking can be helped and our physical therapists are the experts uniquely trained to do so." data-original-title="Difficulty Walking" title="Difficulty Walking">Difficulty Walking</li>
+                <li  class="text conditionLi" data-container="body" data-toggle="popover" data-placement="left" data-content="The ending of the word 'itis' is defined as inflammation. Therefore, tendonitis is inflammation of a tendon, which connects muscles to bones. Commonly, the tendon that connects your quadriceps muscle to the tibia bone (quadriceps tendon above the kneecap and patellar ligament below the kneecap) can become inflamed resulting in a condition also known as jumper’s knee. This thick tendon runs over the top of your kneecap and attaches to the tibia bone below. This structure can often become inflamed due to abnormal joint movements, poor posture and weakness of the surrounding musculature. This causes strain to the tendon with resulting pain during repetitive movement and especially with squatting or kneeling down. Other areas of tendonitis in the knee can occur such as the back, outside or inside of the knee." data-original-title="Tendonitis" title="Tendonitis">Tendonitis</li>
+            </ul>
+        </div>
+
+        <div  class="list" id="hand">
+            <h5 class="title">Elbow, Wrist and Hand</h5>
+
+            <ul>
+                <li  class="text conditionLi" data-container="body" data-toggle="popover" data-placement="left" data-content="There are many nerves traveling along the elbow, forearm, wrist and hand. With injuries to the hand, wrist, forearm or elbow, nerve damage can result. Symptoms may be mild such as mild numbness, tingling or abnormal temperature feelings. In severe cases, muscle function and paralysis can occur. Many nerve injuries occur because of overuse and chronic swelling. This doesn't allow proper circulation to flow to the nerves, affecting their functioning. Poor posture while doing common activities generally causes overuse injuries and chronic swelling. If you have significant nerve sensations into your arm, wrist or hand, it is important to follow up with us and your physician." data-original-title="Nerve Injuries" title="Nerve Injuries">Nerve Injuries</li>
+                <li  class="text conditionLi" data-container="body" data-toggle="popover" data-placement="left" data-content="Common surgeries in the elbow, wrist and hand involve repair of the vast amount of tendons and ligaments in these areas. Depending on the type and extent of your surgery, your physician will recommend physical therapy to help you recover completely from your surgical procedure. The fingers, hand and wrist are very tightly packed with tendons, ligaments and intricate structures. This means that swelling is very common in these areas after surgery and can become quite stiff leading to loss of range of motion, gripping, dexterity and normal functioning of the fingers, hand, wrist or elbow." data-original-title="Tendon Repair & Post-surgery Rehab" title="Tendon Repair & Post-surgery Rehab">Tendon Repair & Post-surgery Rehab</li>
+                <li  class="text conditionLi" data-container="body" data-toggle="popover" data-placement="left" data-content="Sprains and strains are very common in the hand, wrist and elbow. Sprains refer to injuries of the ligaments (connect bone to bone) and strains refer to injuries of the muscles or tendons (connect muscle to bone). Sprains and strains occur from quick over-stretching of the tissues causing micro-tearing and subsequent injury. Swelling begins as part of the inflammation process, causing pain and difficulty with movement. The first step in treating sprains or strains in the wrist, elbow, hand or fingers is to rest, ice and elevate it. With severe limitations in movement you should see your physical therapist right away. There are different levels of sprain or strain from mild to severe. In some cases, the tearing can be complete and even need surgical repair." data-original-title="Sprain / Strain" title="Sprain / Strain">Sprain / Strain</li>
+            </ul>
+        </div>
+
+        <div  class="list" id="foot">
+            <h5 class="title">Foot and Ankle</h5>
+
+            <ul>
+                <li  class="text conditionLi" data-container="body" data-toggle="popover" data-placement="left" data-content="Achilles tendonitis is an inflammation of the Achilles tendon that attaches your calf muscle to the back of your heel. Achilles tendonitis is typically caused by tightness in the hamstrings and calf muscles. In addition, limitations in ankle and foot range of motion can alter your walking pattern, putting excessive strain on the Achilles tendon, causing tendonitis. Typically, the back of the ankle and heel is very painful to touch, especially after prolonged walking. Rest tends to help Achilles tendonitis while walking aggravates it." data-original-title="Achilles Tendonitis" title="Achilles Tendonitis">Achilles Tendonitis</li>
+                <li  class="text conditionLi" data-container="body" data-toggle="popover" data-placement="left" data-content="There are many bones that can be fractured in the ankle and foot. Typical fractures that occur are to the fibula bone (avulsion fracture), metatarsal bone fractures and calcaneal fractures. Fractures are typically immobilized with casting or bracing. In severe cases surgery may be required to align and stabilize the bone with pins or plates. After being immobile for a period of time whether from casting or surgery, the ankle and foot joints will become quite stiff. This loss of motion in the joint also causes discomfort and results in lost muscle strength in the ankle and foot." data-original-title="Ankle and Foot Fractures" title="Ankle and Foot Fractures">Ankle and Foot Fractures</li>
+                <li  class="text conditionLi" data-container="body" data-toggle="popover" data-placement="left" data-content="Ankle instability typically occurs after the ligaments in the ankle have stretched out, losing the normal stability of the bones in the ankle and foot. This can be a result of an injury or occur over a long period of time from poor foot positioning, bad shoe wear or genetic predisposition. When there is ankle instability the probability of further ankle sprains increases significantly. While the ligaments themselves may not be able to shorten back to normal, the muscles supporting the ankle can be strengthened to take up the slack. This compensation allows for better stability in the ankle and foot with walking, running and sports. Bracing may also be needed depending on the severity of the instability." data-original-title="Ankle instability" title="Ankle instability">Ankle instability</li>
+            </ul>
+        </div>
+
+       </div>
+    </div>
+    <div class="col-md-2">
+     
+    </div>
+
+   
+</div>
+
+<!-- Footer -->
+<footer class="page-footer font-small blue-grey lighten-5">
+
+    <div style="background-color: #33CC9A;">
+      <div class="container">
+
+        <!-- Grid row-->
+        <div class="row py-4 d-flex align-items-center">
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+            <h6 class="mb-0">Get connected with us on social networks!</h6>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-7 text-center text-md-right" id="socialMediaContainer">
+
+            <!-- Facebook -->
+            <a class="fb-ic">
+              <i class="fab fa-facebook-f white-text mr-4"> </i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic">
+              <i class="fab fa-twitter white-text mr-4"> </i>
+            </a>
+            <!-- Google +-->
+            <a class="gplus-ic">
+              <i class="fab fa-google-plus-g white-text mr-4"> </i>
+            </a>
+            <!--Linkedin -->
+            <a class="li-ic">
+              <i class="fab fa-linkedin-in white-text mr-4"> </i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic">
+              <i class="fab fa-instagram white-text"> </i>
+            </a>
+
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row-->
+
+      </div>
+    </div>
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left mt-5">
+
+      <!-- Grid row -->
+      <div class="row mt-3 dark-grey-text">
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+
+          <!-- Content -->
+          <h6 class="text-uppercase font-weight-bold">Live Free Physical Therapy</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            Discover the solution to easy living and <a href="../views/signup.html">join us</a> now.
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">LINKS</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <a class="dark-grey-text" href="../views/aboutus.html">About Us</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="../views/reviews.html">Reviews</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="../views/conditions.html">Conditions</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="../views/techniques.html">Techniques</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="../views/appointments.html">Appointment</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="../views/contact.html">Contact Us</a>
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+          <!-- Links -->
+          <!-- <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <a class="dark-grey-text" href="#!">Your Account</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="#!">Become an Affiliate</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="#!">Shipping Rates</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="#!">Help</a>
+          </p> -->
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">Contact</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <i class="fas fa-home mr-3"></i> Baabdat, Principal Road</p>
+          <p>
+            <i class="fas fa-envelope mr-3"></i> livefreeclinic@gmail.com</p>
+          <p>
+            <i class="fas fa-phone mr-3"></i> + 961 04 234 567 </p>
+          <p>
+            <i class="fas fa-print mr-3"></i> + 961 04 234 567</p>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center text-black-50 py-3">© 2019 Copyright:
+      <a class="dark-grey-text" href=""> Marianne Abi Kanaan</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+    integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous">
+  </script>
+  <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+    integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous">
+  </script>
+  <script src="../scripts/conditions.js"></script>
+
+</body>
+
+</html>

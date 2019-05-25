@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.text{
+  word-spacing: 1px;
+    font-family: Lato; 
+    font-size: 18px; 
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+    line-height: 34.2px; 
+    color: #495057;
+}
+
+.title{
+    font-family: "Open Sans" !important;
+    color: #1B7BBA !important;
+}
+
+.custom-control-label{
+  color: #7D858C;
+}
+
+.dropdown-toggle, .dropdown-item, .filter-option-inner-inner{
+  font-weight: 400 !important;
+  font-size: 1em !important;
+  color: #7D858C !important;
+}
+
+input{
+  margin-bottom: 10% !important;
+}
+
+#formContainer{
+  background-color: white;
+  padding: 4%;
+}
+
+#saveBtn{
+  margin: auto;
+  background-color: #33CC9A;
+  color: white;
+}
+
+#saveBtn:hover{
+  background-color: #FFF;
+  color: #33CC9A;
+}
+
+#rightSection{
+  box-shadow: 0px 12px 39px -19px rgba(0, 0, 0, 0.75);
+  height: 100%;
+  background-color: white;
+  color: black;
+}
+
+#rightSection header{
+  color: white;
+  text-align: center;
+  padding: 5%;
+  background-color: #33CC9A;
+  margin-bottom: 4%;
+}
+
+.hourText{
+    padding: 2% 7%;
+    color: #b4aeae;
+    font-size: 1.1em;
+    margin: 0;
+}
+
+#error{
+  display: none;
+  color: red;
+  margin: 0;
+}
+
+.gj-icon, .inputIcons{
+    color: #009688;
+}
+
+.gj-picker-md [role=header], .gj-picker-md [role=body] [role=arrow], .gj-picker .arrow-begin {
+  background: #009688 !important;
+}
+
+.gj-picker-md [role=footer] button.gj-button-md{
+  color: #009688 !important;
+}
+.gj-picker-md .arrow-end{
+  border-color: #009688 !important;
+}
+
+.bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+  width: 100% !important;
+}
+
+.bootstrap-select .dropdown-toggle .filter-option-inner-inner, .dropdown-toggle:after {
+  color: #495057;
+}
+
+.bootstrap-select .dropdown-menu {
+  min-width: 100% !important;
+}
+
+h3 {
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+.custom-control-label{
+  padding-top: 5%;
+}
+
+
+#success{
+  display: none;
+  margin-bottom: 3%;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+  cursor: pointer;
+  color: white !important;
+  font-size: inherit !important;
+}
+
+
